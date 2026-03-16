@@ -7,7 +7,7 @@ public class FirstPersonController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Camera playerCamera;
 
-    [Header("Input Actions")]
+    [Header("Input")]
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference lookAction;
     [SerializeField] private InputActionReference jumpAction;
@@ -19,13 +19,17 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("Look")]
     [SerializeField] private float mouseSensitivity = 0.1f;
-    [SerializeField] private float gamepadLookSpeed = 120f;
     [SerializeField] private float minPitch = -80f;
     [SerializeField] private float maxPitch = 80f;
 
+    [Header("Ground Check")]
+    [SerializeField] private float groundCheckRadius = 0.2f;
+
     private CharacterController controller;
     private Vector3 velocity;
-    private float cameraPitch = 0f;
+    private float cameraPitch;
+
+    private bool isOnTheFloor;
 
     private void Awake()
     {
@@ -37,16 +41,16 @@ public class FirstPersonController : MonoBehaviour
 
     private void OnEnable()
     {
-        moveAction?.action.Enable();
-        lookAction?.action.Enable();
-        jumpAction?.action.Enable();
+        moveAction.action.Enable();
+        lookAction.action.Enable();
+        jumpAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        moveAction?.action.Disable();
-        lookAction?.action.Disable();
-        jumpAction?.action.Disable();
+        moveAction.action.Disable();
+        lookAction.action.Disable();
+        jumpAction.action.Disable();
     }
 
     private void Start()
@@ -57,34 +61,36 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        CheckIfOnFloor();
         HandleLook();
         HandleMovement();
+    }
+
+    private void CheckIfOnFloor()
+    {
+        // punto sotto il CharacterController
+        Vector3 bottom = transform.position
+                       + controller.center
+                       - Vector3.up * (controller.height / 2);
+
+        // controllo collisione con qualsiasi layer
+        isOnTheFloor = Physics.CheckSphere(
+            bottom,
+            groundCheckRadius,
+            ~0,
+            QueryTriggerInteraction.Ignore
+        );
     }
 
     private void HandleLook()
     {
         Vector2 lookInput = lookAction.action.ReadValue<Vector2>();
 
-        bool isGamepad = Gamepad.current != null && Gamepad.current.rightStick.ReadValue().sqrMagnitude > 0.0001f;
+        float lookX = lookInput.x * mouseSensitivity;
+        float lookY = lookInput.y * mouseSensitivity;
 
-        float lookX;
-        float lookY;
-
-        if (isGamepad)
-        {
-            lookX = lookInput.x * gamepadLookSpeed * Time.deltaTime;
-            lookY = lookInput.y * gamepadLookSpeed * Time.deltaTime;
-        }
-        else
-        {
-            lookX = lookInput.x * mouseSensitivity;
-            lookY = lookInput.y * mouseSensitivity;
-        }
-
-        // Rotazione orizzontale del corpo
         transform.Rotate(Vector3.up * lookX);
 
-        // Rotazione verticale della camera
         cameraPitch -= lookY;
         cameraPitch = Mathf.Clamp(cameraPitch, minPitch, maxPitch);
 
@@ -101,21 +107,30 @@ public class FirstPersonController : MonoBehaviour
 
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        // Se siamo a terra e stiamo cadendo, manteniamo una piccola spinta verso il basso
-        if (controller.isGrounded && velocity.y < 0f)
-        {
+        // mantieni il player attaccato al terreno
+        if (isOnTheFloor && velocity.y < 0)
             velocity.y = -2f;
-        }
 
-        // Salto
-        if (jumpAction.action.WasPressedThisFrame() && controller.isGrounded)
-        {
+        // salto
+        if (jumpAction.action.WasPressedThisFrame() && isOnTheFloor)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
 
-        // Gravità
+        // gravità
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!controller)
+            controller = GetComponent<CharacterController>();
+
+        Vector3 bottom = transform.position
+                       + controller.center
+                       - Vector3.up * (controller.height / 2);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(bottom, groundCheckRadius);
     }
 }

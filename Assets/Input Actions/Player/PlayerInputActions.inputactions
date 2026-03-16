@@ -7,7 +7,7 @@
             "id": "b9fc3beb-be9a-4924-be0e-8b44af0e987f",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "MoveWasd",
                     "type": "Value",
                     "id": "1d114a13-4055-471b-a74f-f410edd1e9a9",
                     "expectedControlType": "Vector2",
@@ -24,7 +24,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MoveWasd",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -35,7 +35,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MoveWasd",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -46,7 +46,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MoveWasd",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -57,7 +57,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MoveWasd",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -68,7 +68,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MoveWasd",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
@@ -79,7 +79,7 @@
             "id": "307150cc-8f75-478f-9fe3-cf07c8128280",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "JumpSpace",
                     "type": "Button",
                     "id": "5a60fb6b-2450-42a4-9a06-0b7b0266a1ef",
                     "expectedControlType": "",
@@ -93,10 +93,10 @@
                     "name": "",
                     "id": "e1db038f-cf78-4109-91e0-76377edc6eb2",
                     "path": "<Keyboard>/space",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "JumpSpace",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -107,7 +107,7 @@
             "id": "d3bd198c-0ba0-47f0-a063-feb1ad1dee59",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "LookMouse",
                     "type": "Value",
                     "id": "3784f684-b12e-4720-ba9d-cb71affb4b17",
                     "expectedControlType": "Vector2",
@@ -124,7 +124,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "LookMouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
