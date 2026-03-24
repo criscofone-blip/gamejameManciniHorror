@@ -5,13 +5,14 @@ public class PlayerInteraction : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Camera playerCamera;
+    [SerializeField] private InteractionPromptUI interactionPromptUI;
+
+    [Header("Input")]
+    [SerializeField] private InputActionReference interactAction;
 
     [Header("Interaction")]
     [SerializeField] private float interactionDistance = 3f;
-    [SerializeField] private InputActionReference interactAction;
-
-    [Header("UI")]
-    [SerializeField] private GameObject interactUI;
+    [SerializeField] private LayerMask interactionMask = ~0;
 
     private IInteractable currentInteractable;
 
@@ -27,36 +28,38 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Update()
     {
-        CheckInteraction();
-
-        if (interactAction.action.WasPressedThisFrame() && currentInteractable != null)
-        {
-            currentInteractable.Interact();
-        }
+        DetectInteractable();
+        HandleInteractionInput();
     }
 
-    private void CheckInteraction()
+    private void DetectInteractable()
     {
+        currentInteractable = null;
+
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance))
+        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactionMask, QueryTriggerInteraction.Ignore))
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
 
-            if (interactable != null)
+            if (currentInteractable != null)
             {
-                currentInteractable = interactable;
-
-                if (!interactUI.activeSelf)
-                    interactUI.SetActive(true);
-
+                interactionPromptUI.Show(currentInteractable.GetInteractionText());
                 return;
             }
         }
 
-        currentInteractable = null;
+        interactionPromptUI.Hide();
+    }
 
-        if (interactUI.activeSelf)
-            interactUI.SetActive(false);
+    private void HandleInteractionInput()
+    {
+        if (currentInteractable == null)
+            return;
+
+        if (interactAction.action.WasPressedThisFrame())
+        {
+            currentInteractable.Interact();
+        }
     }
 }
