@@ -7,7 +7,8 @@ public class EnemyVisionChase : MonoBehaviour
     private enum EnemyState
     {
         Wander,
-        Chase
+        Chase,
+        Investigate
     }
 
     [Header("References")]
@@ -18,22 +19,33 @@ public class EnemyVisionChase : MonoBehaviour
     [SerializeField] private float viewDistance = 12f;
     [SerializeField] private float viewAngle = 90f;
     [SerializeField] private float eyeHeight = 1.6f;
-    [SerializeField] private LayerMask obstacleMask = ~0;
+    [SerializeField] private LayerMask visionMask = ~0;
 
     [Header("Wander")]
     [SerializeField] private float wanderRadius = 8f;
     [SerializeField] private float wanderInterval = 3f;
 
+    [Header("Investigate")]
+    [SerializeField] private float investigateDuration = 4f;
+    [SerializeField] private float investigateStopDistance = 1f;
+
     [Header("Movement")]
     [SerializeField] private float wanderSpeed = 2f;
+    [SerializeField] private float investigateSpeed = 2.5f;
     [SerializeField] private float chaseSpeed = 4f;
 
     [Header("Game Over")]
     [SerializeField] private float killDistance = 1.5f;
 
+    [Header("Debug")]
+    [SerializeField] private bool showDebugLogs = false;
+
     private NavMeshAgent agent;
     private EnemyState currentState;
     private float wanderTimer;
+    private float investigateTimer;
+    private Vector3 lastSeenPlayerPosition;
+    private bool wasFrozen;
 
     private void Awake()
     {
@@ -56,37 +68,145 @@ public class EnemyVisionChase : MonoBehaviour
         currentState = EnemyState.Wander;
         agent.speed = wanderSpeed;
         SetNewWanderPoint();
+
+        if (showDebugLogs)
+        {
+            Debug.Log($"[Enemy] Player trovato: {player != null}");
+            Debug.Log($"[Enemy] Agent on NavMesh: {agent.isOnNavMesh}");
+        }
     }
 
     private void Update()
     {
-        if (player == null)
+        if (player == null || !agent.isOnNavMesh)
             return;
+
+        if (PlayerEyesCover.EyesCovered)
+        {
+            FreezeEnemy();
+            return;
+        }
+
+        if (wasFrozen)
+            UnfreezeEnemy();
 
         CheckGameOver();
 
         bool canSeePlayer = CanSeePlayer();
 
-        if (canSeePlayer)
+        switch (currentState)
         {
-            currentState = EnemyState.Chase;
+            case EnemyState.Wander:
+                if (canSeePlayer)
+                    StartChase();
+                else
+                    UpdateWander();
+                break;
+
+            case EnemyState.Chase:
+                if (canSeePlayer)
+                    UpdateChase();
+                else
+                    StartInvestigate();
+                break;
+
+            case EnemyState.Investigate:
+                if (canSeePlayer)
+                    StartChase();
+                else
+                    UpdateInvestigate();
+                break;
         }
-        else if (currentState == EnemyState.Chase)
-        {
-            currentState = EnemyState.Wander;
-            SetNewWanderPoint();
-        }
+    }
+
+    private void FreezeEnemy()
+    {
+        if (wasFrozen)
+            return;
+
+        wasFrozen = true;
+        agent.isStopped = true;
+
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Frozen");
+    }
+
+    private void UnfreezeEnemy()
+    {
+        wasFrozen = false;
+        agent.isStopped = false;
 
         switch (currentState)
         {
             case EnemyState.Wander:
-                UpdateWander();
+                SetNewWanderPoint();
                 break;
 
             case EnemyState.Chase:
-                UpdateChase();
+                agent.SetDestination(player.position);
+                break;
+
+            case EnemyState.Investigate:
+                agent.SetDestination(lastSeenPlayerPosition);
                 break;
         }
+
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Unfrozen");
+    }
+
+    private void StartChase()
+    {
+        currentState = EnemyState.Chase;
+        agent.speed = chaseSpeed;
+        lastSeenPlayerPosition = player.position;
+        agent.SetDestination(player.position);
+
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Stato -> CHASE");
+    }
+
+    private void UpdateChase()
+    {
+        agent.speed = chaseSpeed;
+        lastSeenPlayerPosition = player.position;
+        agent.SetDestination(player.position);
+    }
+
+    private void StartInvestigate()
+    {
+        currentState = EnemyState.Investigate;
+        agent.speed = investigateSpeed;
+        investigateTimer = investigateDuration;
+        agent.SetDestination(lastSeenPlayerPosition);
+
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Stato -> INVESTIGATE");
+    }
+
+    private void UpdateInvestigate()
+    {
+        agent.speed = investigateSpeed;
+
+        if (!agent.pathPending && agent.remainingDistance <= investigateStopDistance)
+        {
+            investigateTimer -= Time.deltaTime;
+            transform.Rotate(Vector3.up * 60f * Time.deltaTime);
+        }
+
+        if (investigateTimer <= 0f)
+            StartWander();
+    }
+
+    private void StartWander()
+    {
+        currentState = EnemyState.Wander;
+        agent.speed = wanderSpeed;
+        wanderTimer = 0f;
+        SetNewWanderPoint();
+
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Stato -> WANDER");
     }
 
     private void UpdateWander()
@@ -99,12 +219,6 @@ public class EnemyVisionChase : MonoBehaviour
             SetNewWanderPoint();
             wanderTimer = 0f;
         }
-    }
-
-    private void UpdateChase()
-    {
-        agent.speed = chaseSpeed;
-        agent.SetDestination(player.position);
     }
 
     private void CheckGameOver()
@@ -127,7 +241,7 @@ public class EnemyVisionChase : MonoBehaviour
     private bool CanSeePlayer()
     {
         Vector3 enemyEyePosition = transform.position + Vector3.up * eyeHeight;
-        Vector3 playerTargetPosition = player.position + Vector3.up * 1.6f;
+        Vector3 playerTargetPosition = player.position + Vector3.up * 1.2f;
 
         Vector3 toPlayer = playerTargetPosition - enemyEyePosition;
         float distanceToPlayer = toPlayer.magnitude;
@@ -140,9 +254,15 @@ public class EnemyVisionChase : MonoBehaviour
         if (angleToPlayer > viewAngle * 0.5f)
             return false;
 
-        if (Physics.Raycast(enemyEyePosition, toPlayer.normalized, out RaycastHit hit, viewDistance, obstacleMask, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(
+                enemyEyePosition,
+                toPlayer.normalized,
+                out RaycastHit hit,
+                distanceToPlayer,
+                visionMask,
+                QueryTriggerInteraction.Ignore))
         {
-            if (hit.transform == player || hit.transform.IsChildOf(player))
+            if (hit.transform == player || hit.transform.IsChildOf(player) || player.IsChildOf(hit.transform))
                 return true;
         }
 
@@ -156,9 +276,7 @@ public class EnemyVisionChase : MonoBehaviour
         randomDirection.y = transform.position.y;
 
         if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, wanderRadius, NavMesh.AllAreas))
-        {
             agent.SetDestination(hit.position);
-        }
     }
 
     private bool ReachedDestination()
@@ -188,5 +306,8 @@ public class EnemyVisionChase : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, killDistance);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawSphere(lastSeenPlayerPosition, 0.2f);
     }
 }
