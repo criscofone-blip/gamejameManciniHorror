@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, IInteractable
 {
@@ -20,12 +20,14 @@ public class LightSwitch : MonoBehaviour, IInteractable
             targetLight.enabled = isOn;
     }
 
-    public string GetInteractionText()
+    // 🔧 AGGIORNATO
+    public string GetInteractionText(PlayerItemHolder itemHolder)
     {
         return isOn ? turnOffText : turnOnText;
     }
 
-    public void Interact()
+    // 🔧 AGGIORNATO
+    public void Interact(PlayerItemHolder itemHolder)
     {
         isOn = !isOn;
 

@@ -6,6 +6,7 @@ public class PlayerInteraction : MonoBehaviour
     [Header("References")]
     [SerializeField] private Camera playerCamera;
     [SerializeField] private InteractionPromptUI interactionPromptUI;
+    [SerializeField] private PlayerItemHolder itemHolder;
 
     [Header("Input")]
     [SerializeField] private InputActionReference interactAction;
@@ -44,7 +45,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (currentInteractable != null)
             {
-                interactionPromptUI.Show(currentInteractable.GetInteractionText());
+                interactionPromptUI.Show(currentInteractable.GetInteractionText(itemHolder));
                 return;
             }
         }
@@ -59,7 +60,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (interactAction.action.WasPressedThisFrame())
         {
-            currentInteractable.Interact();
+            currentInteractable.Interact(itemHolder);
         }
     }
 }
