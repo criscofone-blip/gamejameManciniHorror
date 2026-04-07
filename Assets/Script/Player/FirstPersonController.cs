@@ -24,11 +24,12 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("Ground Check")]
     [SerializeField] private float groundCheckRadius = 0.2f;
+    [SerializeField] private float groundCheckOffset = 0.05f;
+    [SerializeField] private LayerMask groundMask = ~0;
 
     private CharacterController controller;
     private Vector3 velocity;
     private float cameraPitch;
-
     private bool isOnTheFloor;
 
     private void Awake()
@@ -68,16 +69,17 @@ public class FirstPersonController : MonoBehaviour
 
     private void CheckIfOnFloor()
     {
-        // punto sotto il CharacterController
         Vector3 bottom = transform.position
                        + controller.center
-                       - Vector3.up * (controller.height / 2);
+                       - Vector3.up * (controller.height * 0.5f);
 
-        // controllo collisione con qualsiasi layer
+        // Sposta il check leggermente sotto il controller
+        Vector3 checkPosition = bottom + Vector3.down * groundCheckOffset;
+
         isOnTheFloor = Physics.CheckSphere(
-            bottom,
+            checkPosition,
             groundCheckRadius,
-            ~0,
+            groundMask,
             QueryTriggerInteraction.Ignore
         );
     }
@@ -107,15 +109,12 @@ public class FirstPersonController : MonoBehaviour
 
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        // mantieni il player attaccato al terreno
-        if (isOnTheFloor && velocity.y < 0)
+        if (isOnTheFloor && velocity.y < 0f)
             velocity.y = -2f;
 
-        // salto
         if (jumpAction.action.WasPressedThisFrame() && isOnTheFloor)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-        // gravità
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
@@ -128,9 +127,11 @@ public class FirstPersonController : MonoBehaviour
 
         Vector3 bottom = transform.position
                        + controller.center
-                       - Vector3.up * (controller.height / 2);
+                       - Vector3.up * (controller.height * 0.5f);
+
+        Vector3 checkPosition = bottom + Vector3.down * groundCheckOffset;
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(bottom, groundCheckRadius);
+        Gizmos.DrawWireSphere(checkPosition, groundCheckRadius);
     }
 }

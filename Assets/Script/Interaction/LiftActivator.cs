@@ -23,7 +23,7 @@ public class LiftActivator : MonoBehaviour, IInteractable, IItemUseTarget
         if (itemHolder == null || !itemHolder.HasItem)
             return missingItemText;
 
-        if (CanUseItem(itemHolder.CurrentItem))
+        if (CanUseItem(itemHolder.CurrentItemData))
             return useItemText;
 
         return missingItemText;
@@ -37,10 +37,10 @@ public class LiftActivator : MonoBehaviour, IInteractable, IItemUseTarget
         if (itemHolder == null || !itemHolder.HasItem)
             return;
 
-        if (!CanUseItem(itemHolder.CurrentItem))
+        if (!CanUseItem(itemHolder.CurrentItemData))
             return;
 
-        UseItem(itemHolder.CurrentItem, itemHolder);
+        UseItem(itemHolder.CurrentItemData, itemHolder);
     }
 
     public bool CanUseItem(HoldableItemData item)
@@ -55,6 +55,6 @@ public class LiftActivator : MonoBehaviour, IInteractable, IItemUseTarget
         if (liftToActivate != null)
             liftToActivate.SetActive(true);
 
-        itemHolder.ClearItem();
+        itemHolder.ConsumeCurrentItem();
     }
 }

@@ -10,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private InputActionReference interactAction;
+    [SerializeField] private InputActionReference dropItemAction;
 
     [Header("Interaction")]
     [SerializeField] private float interactionDistance = 3f;
@@ -20,17 +21,20 @@ public class PlayerInteraction : MonoBehaviour
     private void OnEnable()
     {
         interactAction.action.Enable();
+        dropItemAction.action.Enable();
     }
 
     private void OnDisable()
     {
         interactAction.action.Disable();
+        dropItemAction.action.Disable();
     }
 
     private void Update()
     {
         DetectInteractable();
         HandleInteractionInput();
+        HandleDropInput();
     }
 
     private void DetectInteractable()
@@ -59,8 +63,15 @@ public class PlayerInteraction : MonoBehaviour
             return;
 
         if (interactAction.action.WasPressedThisFrame())
-        {
             currentInteractable.Interact(itemHolder);
-        }
+    }
+
+    private void HandleDropInput()
+    {
+        if (itemHolder == null || !itemHolder.HasItem)
+            return;
+
+        if (dropItemAction.action.WasPressedThisFrame())
+            itemHolder.DropCurrentItem(transform);
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(HeldItem))]
 public class PickupItem : MonoBehaviour, IInteractable
 {
     [Header("Item")]
@@ -7,6 +8,16 @@ public class PickupItem : MonoBehaviour, IInteractable
 
     [Header("Prompt")]
     [SerializeField] private string pickupText = "Premi E per raccogliere";
+    [SerializeField] private string alreadyHoldingText = "Hai già un oggetto in mano";
+
+    private HeldItem heldItem;
+
+    public HoldableItemData ItemData => itemData;
+
+    private void Awake()
+    {
+        heldItem = GetComponent<HeldItem>();
+    }
 
     public string GetInteractionText(PlayerItemHolder itemHolder)
     {
@@ -14,19 +25,26 @@ public class PickupItem : MonoBehaviour, IInteractable
             return pickupText;
 
         if (itemHolder.HasItem)
-            return "Hai già un oggetto in mano";
+            return alreadyHoldingText;
 
         return pickupText;
     }
 
     public void Interact(PlayerItemHolder itemHolder)
     {
-        if (itemHolder == null || itemData == null)
+        if (itemHolder == null)
             return;
 
-        if (!itemHolder.TrySetItem(itemData))
-            return;
+        itemHolder.TryPickItem(this);
+    }
 
-        gameObject.SetActive(false);
+    public void OnPickedUp(Transform holdPoint)
+    {
+        heldItem.OnPickedUp(holdPoint);
+    }
+
+    public void OnDropped(Vector3 position, Quaternion rotation)
+    {
+        heldItem.OnDropped(position, rotation);
     }
 }
