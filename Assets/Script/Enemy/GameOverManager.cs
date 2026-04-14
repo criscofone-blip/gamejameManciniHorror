@@ -1,4 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
+
         if (gameOverUI != null)
             gameOverUI.SetActive(false);
     }
@@ -25,5 +28,20 @@ public class GameOverManager : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    // 🔁 RICOMINCIA
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // 🚪 ESCI
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game");
+
+        Application.Quit();
     }
 }
