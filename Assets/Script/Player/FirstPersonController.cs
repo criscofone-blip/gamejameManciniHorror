@@ -27,10 +27,18 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float groundCheckOffset = 0.05f;
     [SerializeField] private LayerMask groundMask = ~0;
 
+    [Header("Head Bob")]
+    [SerializeField] private float bobFrequency = 8f;
+    [SerializeField] private float bobAmplitude = 0.05f;
+    [SerializeField] private float bobReturnSpeed = 8f;
+
     private CharacterController controller;
     private Vector3 velocity;
     private float cameraPitch;
     private bool isOnTheFloor;
+
+    private Vector3 cameraStartLocalPosition;
+    private float bobTimer;
 
     private void Awake()
     {
@@ -58,6 +66,8 @@ public class FirstPersonController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        cameraStartLocalPosition = playerCamera.transform.localPosition;
     }
 
     private void Update()
@@ -65,6 +75,7 @@ public class FirstPersonController : MonoBehaviour
         CheckIfOnFloor();
         HandleLook();
         HandleMovement();
+        HandleHeadBob();
     }
 
     private void CheckIfOnFloor()
@@ -73,7 +84,6 @@ public class FirstPersonController : MonoBehaviour
                        + controller.center
                        - Vector3.up * (controller.height * 0.5f);
 
-        // Sposta il check leggermente sotto il controller
         Vector3 checkPosition = bottom + Vector3.down * groundCheckOffset;
 
         isOnTheFloor = Physics.CheckSphere(
@@ -118,6 +128,38 @@ public class FirstPersonController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void HandleHeadBob()
+    {
+        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        bool isMoving = moveInput.sqrMagnitude > 0.01f;
+
+        Vector3 targetLocalPosition = cameraStartLocalPosition;
+
+        if (isMoving && isOnTheFloor)
+        {
+            bobTimer += Time.deltaTime * bobFrequency;
+
+            float bobOffsetY = Mathf.Sin(bobTimer) * bobAmplitude;
+            targetLocalPosition.y += bobOffsetY;
+        }
+        else
+        {
+            bobTimer = 0f;
+        }
+
+        Vector3 currentLocalPosition = playerCamera.transform.localPosition;
+
+        currentLocalPosition.x = cameraStartLocalPosition.x;
+        currentLocalPosition.z = cameraStartLocalPosition.z;
+        currentLocalPosition.y = Mathf.Lerp(
+            currentLocalPosition.y,
+            targetLocalPosition.y,
+            Time.deltaTime * bobReturnSpeed
+        );
+
+        playerCamera.transform.localPosition = currentLocalPosition;
     }
 
     private void OnDrawGizmosSelected()

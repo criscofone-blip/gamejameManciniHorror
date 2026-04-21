@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.035
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  m_AmbientSkyColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.8544411, g: 0.8555872, b: 0.8584906, a: 1}
+  m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -562,11 +562,14 @@ MonoBehaviour:
   mouseSensitivity: 0.1
   minPitch: -80
   maxPitch: 80
-  groundCheckRadius: 0.14
-  groundCheckOffset: 0.73
+  groundCheckRadius: 0.26
+  groundCheckOffset: 0.7
   groundMask:
     serializedVersion: 2
     m_Bits: 119
+  bobFrequency: 10
+  bobAmplitude: 0.1
+  bobReturnSpeed: 10
 --- !u!143 &206482923
 CharacterController:
   m_ObjectHideFlags: 0
@@ -587,7 +590,7 @@ CharacterController:
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5000001
-  m_SlopeLimit: 45
+  m_SlopeLimit: 50
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
@@ -601,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 206482921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.43, z: 0.035}
+  m_LocalPosition: {x: 0, y: 2.56, z: 0.035}
   m_LocalScale: {x: 1, y: 1.7384, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1012,8 +1015,8 @@ Transform:
   m_GameObject: {fileID: 259893683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.6568, y: 31.5, z: 229.5}
-  m_LocalScale: {x: 45.553883, y: 1, z: 52.679996}
+  m_LocalPosition: {x: -0.493, y: 39.95, z: 0.2}
+  m_LocalScale: {x: 53.881134, y: 1, z: 52.679996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2038822950}
@@ -1383,7 +1386,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037, y: 2.346, z: 0.53}
+  m_LocalPosition: {x: 0.037, y: 2.157, z: 0.57}
   m_LocalScale: {x: 1, y: 0.6896552, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2269,7 +2272,7 @@ Transform:
   m_GameObject: {fileID: 579852508}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.144, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4041,8 +4044,9 @@ GameObject:
   - component: {fileID: 1351546974}
   - component: {fileID: 1351546973}
   - component: {fileID: 1351546972}
+  - component: {fileID: 1351546977}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: StairsRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4135,12 +4139,32 @@ Transform:
   m_GameObject: {fileID: 1351546971}
   serializedVersion: 2
   m_LocalRotation: {x: -0.27059805, y: 0.6532815, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 19.73, y: 5.44, z: 12.7546}
-  m_LocalScale: {x: 4.2888, y: 5.1879926, z: 18.605429}
+  m_LocalPosition: {x: 19.73, y: 5.334, z: 12.7546}
+  m_LocalScale: {x: 4.2888, y: 5.187993, z: 18.605429}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2038822950}
   m_LocalEulerAnglesHint: {x: -45, y: 90, z: 0}
+--- !u!154 &1351546977
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351546971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
 --- !u!1 &1370672969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4158,7 +4182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1370672970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5114,9 +5138,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bce47cd45b2bdad42aa738a66ecd40e1, type: 2}
+    - target: {fileID: -492151007913247379, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
       propertyPath: m_Name
       value: Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086546668555865710, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
       propertyPath: m_Enabled
@@ -5302,6 +5334,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1187454672}
+  - {fileID: 1351546975}
   - {fileID: 259893689}
   - {fileID: 459893278}
   - {fileID: 968423597}
@@ -5672,7 +5705,6 @@ SceneRoots:
   - {fileID: 2136146491}
   - {fileID: 885858375}
   - {fileID: 2143464523}
-  - {fileID: 1351546975}
   - {fileID: 1412345429}
   - {fileID: 237937114}
   - {fileID: 294039224}
