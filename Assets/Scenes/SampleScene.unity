@@ -44786,7 +44786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: viewAngle
-      value: 323.2
+      value: 313.7
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: chaseSpeed
@@ -44804,6 +44804,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 885858374}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: visionMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -44818,7 +44822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.555
+      value: 9.73
       objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44826,7 +44830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.480488
+      value: 28.05
       objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44855,6 +44859,10 @@ PrefabInstance:
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323152795258897850, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7537758118342221820, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_Name

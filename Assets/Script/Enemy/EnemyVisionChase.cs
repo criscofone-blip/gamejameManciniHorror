@@ -20,6 +20,7 @@ public class EnemyVisionChase : MonoBehaviour
     [SerializeField] private float viewAngle = 90f;
     [SerializeField] private float eyeHeight = 1.6f;
     [SerializeField] private LayerMask visionMask = ~0;
+ 
 
     [Header("Wander")]
     [SerializeField] private float wanderRadius = 8f;
@@ -243,7 +244,7 @@ public class EnemyVisionChase : MonoBehaviour
         Vector3 enemyEyePosition = transform.position + Vector3.up * eyeHeight;
         Vector3 playerTargetPosition = player.position + Vector3.up * 1.2f;
 
-        Vector3 toPlayer = playerTargetPosition - enemyEyePosition;
+        Vector3 toPlayer = playerTargetPosition - transform.position; //modifica => "transform.position" invece di "enemyEyePosition".
         float distanceToPlayer = toPlayer.magnitude;
 
         if (distanceToPlayer > viewDistance)
@@ -263,6 +264,7 @@ public class EnemyVisionChase : MonoBehaviour
                 QueryTriggerInteraction.Ignore))
         {
             if (hit.transform == player || hit.transform.IsChildOf(player) || player.IsChildOf(hit.transform))
+                Debug.Log("seen"); //aggiunta
                 return true;
         }
 
