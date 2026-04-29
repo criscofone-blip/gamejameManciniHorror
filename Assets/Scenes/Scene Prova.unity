@@ -3170,6 +3170,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 206482927}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: viewAngle
+      value: 269.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: viewDistance
+      value: 26.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 885858374}
