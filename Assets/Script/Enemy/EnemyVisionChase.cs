@@ -254,14 +254,16 @@ public class EnemyVisionChase : MonoBehaviour
         if (angleToPlayer > viewAngle * 0.5f)
             return false;
 
-        if (Physics.Raycast(
-                enemyEyePosition,
-                toPlayer.normalized,
-                out RaycastHit hit,
-                distanceToPlayer,
-                visionMask,
-                QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast( 
+        enemyEyePosition,
+        toPlayer.normalized,
+        out RaycastHit hit,
+        100,
+        visionMask,
+        QueryTriggerInteraction.Ignore))
         {
+            Debug.Log("Enemy vede raycast hit: " + hit.transform.name);
+
             if (hit.transform == player || hit.transform.IsChildOf(player) || player.IsChildOf(hit.transform))
                 return true;
         }

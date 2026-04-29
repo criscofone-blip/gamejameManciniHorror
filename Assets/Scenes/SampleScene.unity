@@ -1024,7 +1024,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -5080,7 +5080,7 @@ Light:
   m_InnerSpotAngle: 114.6169
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -12083,7 +12083,7 @@ Light:
   m_InnerSpotAngle: 43.566143
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -13915,7 +13915,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14174,7 +14174,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -18317,7 +18317,7 @@ Light:
   m_InnerSpotAngle: 24.854446
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -18808,7 +18808,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -22443,7 +22443,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -27172,7 +27172,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -33967,7 +33967,7 @@ Light:
   m_InnerSpotAngle: 114.6169
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -36579,7 +36579,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -38535,7 +38535,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -44782,15 +44782,19 @@ PrefabInstance:
       objectReference: {fileID: 1105233074}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: eyeHeight
-      value: -0.53
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: viewAngle
-      value: 323.2
+      value: 309.3
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: chaseSpeed
-      value: 5.23
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: wanderSpeed
+      value: 2.06
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: killDistance
@@ -44798,12 +44802,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: viewDistance
-      value: 12.3
+      value: 22.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: wanderRadius
+      value: 2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: showDebugLogs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: wanderInterval
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 885858374}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: investigateSpeed
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: visionMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: investigateDuration
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 953318309322066338, guid: adee9512cba82734fafa5615988896b9, type: 3}
+      propertyPath: investigateStopDistance
+      value: 0.48
+      objectReference: {fileID: 0}
     - target: {fileID: 1317270618639166010, guid: adee9512cba82734fafa5615988896b9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -54175,17 +54207,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2202398671292178099, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507151101850241248, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3204421008636900460, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: gravity
       value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3204421008636900460, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: moveSpeed
-      value: 3.21
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 3204421008636900460, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: jumpHeight
-      value: 4.29
+      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 3204421008636900460, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: bobFrequency
@@ -54195,9 +54235,13 @@ PrefabInstance:
       propertyPath: eyesCoveredPanel
       value: 
       objectReference: {fileID: 1069672776}
+    - target: {fileID: 6158159158653676859, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7722837164229416659, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.78
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 7722837164229416659, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -54205,7 +54249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722837164229416659, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.33
+      value: 9.54
       objectReference: {fileID: 0}
     - target: {fileID: 7722837164229416659, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_LocalRotation.w
