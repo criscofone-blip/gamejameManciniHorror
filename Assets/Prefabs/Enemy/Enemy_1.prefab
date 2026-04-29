@@ -150,18 +150,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVisionChase
   player: {fileID: 0}
   gameOverManager: {fileID: 0}
-  viewDistance: 4.9
-  viewAngle: 69.5
-  eyeHeight: -0.5
+  viewDistance: 16
+  viewAngle: 160
+  eyeHeight: -0.53
   visionMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  wanderRadius: 6.01
+  wanderRadius: 6.11
   wanderInterval: 3
   investigateDuration: 4
   investigateStopDistance: 3.29
   wanderSpeed: 3.06
   investigateSpeed: 3.78
-  chaseSpeed: 4.74
+  chaseSpeed: 4.42
   killDistance: 0.88
   showDebugLogs: 0

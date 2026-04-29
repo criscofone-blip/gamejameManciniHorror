@@ -161,8 +161,14 @@ public class EnemyVisionChase : MonoBehaviour
         currentState = EnemyState.Chase;
         agent.speed = chaseSpeed;
         lastSeenPlayerPosition = player.position;
-        agent.SetDestination(player.position);
-
+        if (NavMesh.SamplePosition(player.position, out NavMeshHit hit, 3f, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+        }
+        else
+        {
+            StartInvestigate();
+        }
         if (showDebugLogs)
             Debug.Log("[Enemy] Stato -> CHASE");
     }
@@ -171,7 +177,15 @@ public class EnemyVisionChase : MonoBehaviour
     {
         agent.speed = chaseSpeed;
         lastSeenPlayerPosition = player.position;
-        agent.SetDestination(player.position);
+
+        if (NavMesh.SamplePosition(player.position, out NavMeshHit hit, 3f, NavMesh.AllAreas))
+        {
+            agent.SetDestination(hit.position);
+        }
+        else
+        {
+            StartInvestigate();
+        }
     }
 
     private void StartInvestigate()
@@ -263,7 +277,7 @@ public class EnemyVisionChase : MonoBehaviour
                 visionMask,
                 QueryTriggerInteraction.Ignore))
         {
-            if (hit.transform == player || hit.transform.IsChildOf(player) || player.IsChildOf(hit.transform))
+            if (hit.transform == player || hit.transform.IsChildOf(player))
                 Debug.Log("seen"); //aggiunta
                 return true;
         }
