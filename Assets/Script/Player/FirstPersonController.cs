@@ -40,6 +40,9 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 cameraStartLocalPosition;
     private float bobTimer;
 
+    public bool IsOnTheFloor => isOnTheFloor;
+    public Vector2 MoveInput { get; private set; }
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -111,7 +114,8 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 input = moveAction.action.ReadValue<Vector2>();
+        MoveInput = moveAction.action.ReadValue<Vector2>();
+        Vector2 input = MoveInput;
 
         Vector3 move =
             transform.right * input.x +
