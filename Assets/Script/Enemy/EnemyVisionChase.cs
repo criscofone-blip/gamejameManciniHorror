@@ -4,7 +4,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyVisionChase : MonoBehaviour
 {
-    private enum EnemyState
+    public enum EnemyState
     {
         Wander,
         Chase,
@@ -47,6 +47,7 @@ public class EnemyVisionChase : MonoBehaviour
     private float investigateTimer;
     private Vector3 lastSeenPlayerPosition;
     private bool wasFrozen;
+    public EnemyState CurrentState => currentState;
 
     private void Awake()
     {
