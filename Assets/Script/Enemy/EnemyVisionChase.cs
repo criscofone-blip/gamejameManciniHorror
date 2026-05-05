@@ -285,15 +285,20 @@ public class EnemyVisionChase : MonoBehaviour
 
                 if(LayerName == "Walls")
                 {
-                    //Debug.Log("wall");
+                    Debug.Log("wall");
                     return false;
                 }
 
+                if (hit.transform == player || hit.transform.IsChildOf(player))
+                {
+                    Debug.Log("seen"); //aggiunta
+                    return true;
+                }
+                   
+
             }
                 
-            if (hit.transform == player || hit.transform.IsChildOf(player))
-                Debug.Log("seen"); //aggiunta
-                return true;
+            
         }
 
         return false;
