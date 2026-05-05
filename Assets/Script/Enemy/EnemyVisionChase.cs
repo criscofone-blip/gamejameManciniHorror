@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -278,9 +279,26 @@ public class EnemyVisionChase : MonoBehaviour
                 visionMask,
                 QueryTriggerInteraction.Ignore))
         {
-            if (hit.transform == player || hit.transform.IsChildOf(player))
-                Debug.Log("seen"); //aggiunta
-                return true;
+            if(hit.collider != null) //agginta sezione if
+            {
+                string LayerName = LayerMask.LayerToName(hit.collider.gameObject.layer);
+
+                if(LayerName == "Walls")
+                {
+                    Debug.Log("wall");
+                    return false;
+                }
+
+                if (hit.transform == player || hit.transform.IsChildOf(player))
+                {
+                    Debug.Log("seen"); //aggiunta
+                    return true;
+                }
+                   
+
+            }
+                
+            
         }
 
         return false;
