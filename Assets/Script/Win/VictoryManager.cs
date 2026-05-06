@@ -49,6 +49,9 @@ public class VictoryManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+
+        GameManager.Instance.IncreaseDifficulty();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

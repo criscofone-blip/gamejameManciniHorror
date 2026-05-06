@@ -176,7 +176,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -305,7 +305,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -434,7 +434,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -540,7 +540,7 @@ Transform:
   m_GameObject: {fileID: 7537758118342221820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.08, y: 1.191, z: 9.65}
+  m_LocalPosition: {x: 27.83, y: 1.191, z: 27.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -663,19 +663,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVisionChase
   player: {fileID: 0}
   gameOverManager: {fileID: 0}
-  viewDistance: 16
+  viewDistance: 17
   viewAngle: 180
   eyeHeight: -0.53
   visionMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  wanderRadius: 6.11
-  wanderInterval: 3
-  investigateDuration: 4
-  investigateStopDistance: 3.29
-  wanderSpeed: 3.02
-  investigateSpeed: 3.53
-  chaseSpeed: 4.42
+  wanderRadius: 10
+  wanderInterval: 17.75
+  investigateDuration: 5.2
+  investigateStopDistance: 6.4
+  wanderSpeed: 4.01
+  investigateSpeed: 6.93
+  chaseSpeed: 8.93
   killDistance: 1.24
   showDebugLogs: 1
 --- !u!114 &7926896835793760591

@@ -283,15 +283,13 @@ public class EnemyVisionChase : MonoBehaviour
             {
                 string LayerName = LayerMask.LayerToName(hit.collider.gameObject.layer);
 
-                if(LayerName == "Walls")
+                if(LayerName == "Obstacles")
                 {
-                    Debug.Log("wall");
                     return false;
                 }
 
                 if (hit.transform == player || hit.transform.IsChildOf(player))
-                {
-                    Debug.Log("seen"); //aggiunta
+                {                    
                     return true;
                 }
                    
