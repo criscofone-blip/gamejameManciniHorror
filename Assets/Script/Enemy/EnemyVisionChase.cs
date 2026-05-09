@@ -285,7 +285,7 @@ public class EnemyVisionChase : MonoBehaviour
 
                 if(LayerName == "Walls")
                 {
-                    Debug.Log("wall");
+                    //Debug.Log("wall");
                     return false;
                 }
 
