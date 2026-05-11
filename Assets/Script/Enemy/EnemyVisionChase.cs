@@ -285,6 +285,10 @@ public class EnemyVisionChase : MonoBehaviour
 
                 if(LayerName == "Obstacles")
                 {
+<<<<<<< HEAD
+=======
+                    //Debug.Log("wall");
+>>>>>>> origin/Cla
                     return false;
                 }
 
