@@ -39,9 +39,10 @@ public class MenuInGame : MonoBehaviour
             else
             {
                 OpenMenuInGame(true);
+                CursorInMenu();
             }
 
-            CursorInMenu();
+           
         }
           
     }
@@ -52,6 +53,13 @@ public class MenuInGame : MonoBehaviour
 
         if (MenuInGamePanel != null)
             MenuInGamePanel.SetActive(opened);
+
+        if(!OpenedMenu)
+        {
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     public void CursorInMenu()
@@ -84,6 +92,14 @@ public class MenuInGame : MonoBehaviour
 
         Application.Quit();
 
+        OpenMenuInGame(false);
+    }
+
+    public void Riprendi()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         OpenMenuInGame(false);
     }
 
