@@ -45,17 +45,16 @@ public class VictoryManager : MonoBehaviour
         Cursor.visible = true;
     }
 
-    // 🔁 RICOMINCIA
     public void RestartGame()
     {
         Time.timeScale = 1f;
 
-        GameManager.Instance.IncreaseDifficulty();
+        if (GameManager.Instance != null)
+            GameManager.Instance.IncreaseDifficultyAndSave();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // 🚪 ESCI
     public void QuitGame()
     {
         Debug.Log("Quit Game");

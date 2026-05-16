@@ -12,12 +12,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        int count = GameManager.Instance.enemyCount;
+        int count = 1;
+
+        if (GameManager.Instance != null)
+            count = GameManager.Instance.EnemyCount;
 
         for (int i = 0; i < count; i++)
         {
             Transform spawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
-
             Instantiate(enemyPrefab, spawn.position, spawn.rotation);
         }
     }
