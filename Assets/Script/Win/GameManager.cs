@@ -4,8 +4,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [Header("Difficulty")]
+    [SerializeField] private int startingEnemyCount = 0;
+
     public int CurrentSlot { get; private set; } = 0;
-    public int EnemyCount { get; private set; } = 1;
+    public int EnemyCount { get; private set; }
 
     private void Awake()
     {
@@ -17,12 +20,14 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        EnemyCount = startingEnemyCount;
     }
 
     public void StartNewGame(int slot)
     {
         CurrentSlot = slot;
-        EnemyCount = 1;
+        EnemyCount = startingEnemyCount;
         SaveManager.SaveEnemyCount(CurrentSlot, EnemyCount);
     }
 

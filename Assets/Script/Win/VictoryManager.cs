@@ -1,9 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class VictoryManager : MonoBehaviour
 {
+    [Header("UI")]
     [SerializeField] private GameObject victoryPanel;
+
+    [Header("Scenes")]
+    [SerializeField] private string cutsceneSceneName = "CutsceneScene";
+    [SerializeField] private string gameSceneName = "MainScene";
+
+    [Header("Victory Cutscenes")]
+    [SerializeField] private VideoClip[] victoryCutscenes;
 
     private BodyPartCollectionManager collectionManager;
     private bool hasWon;
@@ -49,16 +58,37 @@ public class VictoryManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (GameManager.Instance != null)
-            GameManager.Instance.IncreaseDifficultyAndSave();
+        VideoClip selectedCutscene = GetVictoryCutscene();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        CutsceneRequest.Set(
+            selectedCutscene,
+            gameSceneName,
+            true
+        );
+
+        SceneManager.LoadScene(cutsceneSceneName);
+    }
+
+    private VideoClip GetVictoryCutscene()
+    {
+        if (victoryCutscenes == null || victoryCutscenes.Length == 0)
+            return null;
+
+        int currentEnemyCount = 0;
+
+        if (GameManager.Instance != null)
+            currentEnemyCount = GameManager.Instance.EnemyCount;
+
+        int victoryIndex = currentEnemyCount;
+
+        victoryIndex = Mathf.Clamp(victoryIndex, 0, victoryCutscenes.Length - 1);
+
+        return victoryCutscenes[victoryIndex];
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit Game");
-
         Application.Quit();
     }
 }

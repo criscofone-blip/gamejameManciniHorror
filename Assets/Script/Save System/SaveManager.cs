@@ -12,7 +12,7 @@ public static class SaveManager
 
     public static int LoadEnemyCount(int slot)
     {
-        return PlayerPrefs.GetInt(GetKey(EnemyCountKey, slot), 1);
+        return PlayerPrefs.GetInt(GetKey(EnemyCountKey, slot), 0);
     }
 
     public static void SaveEnemyCount(int slot, int enemyCount)

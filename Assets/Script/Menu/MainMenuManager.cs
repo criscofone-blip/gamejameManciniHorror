@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class MainMenuManager : MonoBehaviour
 {
     [Header("Scene")]
     [SerializeField] private string gameSceneName = "MainScene";
+    [SerializeField] private string cutsceneSceneName = "CutsceneScene";
+    [SerializeField] private VideoClip introVideoClip;
 
     [Header("Panels")]
     [SerializeField] private GameObject mainPanel;
@@ -50,14 +53,15 @@ public class MainMenuManager : MonoBehaviour
 
     public void NewGameOnSlot(int slot)
     {
-        if (GameManager.Instance == null)
-        {
-            Debug.LogError("GameManager non trovato nella scena. Aggiungi un GameObject con GameManager.cs.");
-            return;
-        }
-
         GameManager.Instance.StartNewGame(slot);
-        SceneManager.LoadScene(gameSceneName);
+
+        CutsceneRequest.Set(
+            introVideoClip,
+            gameSceneName,
+            false
+        );
+
+        SceneManager.LoadScene(cutsceneSceneName);
     }
 
     public void LoadGameFromSlot(int slot)
