@@ -53,7 +53,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 5.77
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -191,7 +191,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.54
+  m_Radius: 0.53
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: -0.1, z: 0.1}
@@ -236,9 +236,9 @@ MonoBehaviour:
   moveAction: {fileID: -7260345655434643320, guid: 5267bd99dac074a42bf763c2ec6103d6, type: 3}
   lookAction: {fileID: 7901695777883292747, guid: 5267bd99dac074a42bf763c2ec6103d6, type: 3}
   jumpAction: {fileID: -8881312637546347662, guid: 5267bd99dac074a42bf763c2ec6103d6, type: 3}
-  moveSpeed: 5.86
-  jumpHeight: 13.52
-  gravity: -400
+  moveSpeed: 5
+  jumpHeight: 0
+  gravity: -300
   mouseSensitivity: 0.1
   minPitch: -80
   maxPitch: 80
@@ -246,9 +246,9 @@ MonoBehaviour:
   groundCheckOffset: 0
   groundMask:
     serializedVersion: 2
-    m_Bits: 119
-  bobFrequency: 10
-  bobAmplitude: 0.1
+    m_Bits: 375
+  bobFrequency: 6.04
+  bobAmplitude: 0.04
   bobReturnSpeed: 10
 --- !u!114 &84642105170508038
 MonoBehaviour:
@@ -314,13 +314,13 @@ MonoBehaviour:
   footstepSource: {fileID: 5859344784478819324}
   playerController: {fileID: 3204421008636900460}
   footstepClips:
-  - {fileID: 8300000, guid: c05db6823e618d144b10e80117aceaf4, type: 3}
-  - {fileID: 8300000, guid: 3603eadb187cbd24fb8f1c093ab4aab5, type: 3}
-  - {fileID: 8300000, guid: 9e89aa272d2e58b42911463c191670f1, type: 3}
-  - {fileID: 8300000, guid: 1fee56193e6026c439ea1299f03c7e82, type: 3}
-  stepInterval: 0.1
+  - {fileID: 8300000, guid: 8bef153fa3c0995479c1fad9883d827e, type: 3}
+  - {fileID: 8300000, guid: 7a7b440df2195214aa65fbc39884368a, type: 3}
+  - {fileID: 8300000, guid: f4f969ef3f97a5542ad6665b69a37790, type: 3}
+  - {fileID: 8300000, guid: 7a7da10fe25985849b748e0f8772d3cb, type: 3}
+  stepInterval: 0.5
   minVelocity: 0.1
-  volume: 0.7
+  volume: 10
   pitchRandomness: 0.08
 --- !u!114 &6981414815247998667
 MonoBehaviour:
@@ -341,7 +341,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   minImpactSpeed: 0.15
-  volume: 1.54
+  volume: 2.68
   pitchRandomness: 0.08
   impactCooldown: 0.25
 --- !u!1 &4740399289021359223
@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 4740399289021359223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037, y: 0.637, z: -0.036}
+  m_LocalPosition: {x: 0.037, y: 0.451, z: 0.087}
   m_LocalScale: {x: 1, y: 0.6896552, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5913365890223535945
 Transform:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ Transform:
   m_GameObject: {fileID: 6994767468308131674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -708,7 +708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.065
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14f8db962b33d0644b4730c86fd9d4a7, type: 3}
       propertyPath: m_LocalRotation.w
