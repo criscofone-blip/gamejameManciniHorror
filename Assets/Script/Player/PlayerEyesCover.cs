@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class PlayerEyesCover : MonoBehaviour
 {
     public static bool EyesCovered { get; private set; }
-
+    [SerializeField] private AudioMixerSnapshot normalSnapshot;
+    [SerializeField] private AudioMixerSnapshot effectSnapshot;
     [Header("Input")]
     [SerializeField] private InputActionReference coverEyesAction;
 
@@ -41,5 +43,12 @@ public class PlayerEyesCover : MonoBehaviour
 
         if (eyesCoveredPanel != null)
             eyesCoveredPanel.SetActive(covered);
+
+        if (covered)
+            effectSnapshot.TransitionTo(0.2f);
+        else
+            normalSnapshot.TransitionTo(0.2f);
+
+
     }
 }
