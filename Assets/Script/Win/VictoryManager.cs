@@ -46,15 +46,11 @@ public class VictoryManager : MonoBehaviour
 
         hasWon = true;
 
-        if (victoryPanel != null)
-            victoryPanel.SetActive(true);
-
-        Time.timeScale = 0f;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        // Niente panel di vittoria: si va dritti alla cutscene.
+        StartVictoryCutscene();
     }
 
-    public void RestartGame()
+    public void StartVictoryCutscene()
     {
         Time.timeScale = 1f;
 
@@ -67,6 +63,12 @@ public class VictoryManager : MonoBehaviour
         );
 
         SceneManager.LoadScene(cutsceneSceneName);
+    }
+
+    // Mantenuto per compatibilità con eventuali bottoni UI già collegati.
+    public void RestartGame()
+    {
+        StartVictoryCutscene();
     }
 
     private VideoClip GetVictoryCutscene()

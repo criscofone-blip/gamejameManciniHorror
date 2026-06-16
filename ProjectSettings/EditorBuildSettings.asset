@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scena Lavoro Cristian.unity
     guid: 0d78019f15ed3944ea1bad49b2bf3cbc
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: a4271d3f6ccc9404586af316248049aa
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

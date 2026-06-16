@@ -34,7 +34,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public string GetInteractionText(PlayerItemHolder itemHolder)
     {
-        return isDoorClosed ? turnOffText : turnOnText;
+        return isDoorClosed ? turnOnText : turnOffText;
     }
 
 

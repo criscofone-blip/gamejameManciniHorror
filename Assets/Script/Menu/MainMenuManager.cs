@@ -53,6 +53,12 @@ public class MainMenuManager : MonoBehaviour
 
     public void NewGameOnSlot(int slot)
     {
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager non trovato nella scena. Aggiungi un GameObject con GameManager.cs.");
+            return;
+        }
+
         GameManager.Instance.StartNewGame(slot);
 
         CutsceneRequest.Set(

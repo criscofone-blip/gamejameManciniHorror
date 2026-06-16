@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        transform.SetParent(null);     // diventa root → DontDestroyOnLoad funziona
         DontDestroyOnLoad(gameObject);
 
         EnemyCount = startingEnemyCount;

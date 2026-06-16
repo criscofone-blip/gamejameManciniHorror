@@ -33458,6 +33458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1169490881}
+  - component: {fileID: 1169490882}
   m_Layer: 0
   m_Name: FloorClosest
   m_TagString: Untagged
@@ -33496,6 +33497,38 @@ Transform:
   - {fileID: 1390908634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1169490882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169490880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6051d9e72b647a640bf127ad3dee72b0, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1170785532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62831,18 +62864,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 27104412914377898, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
-      propertyPath: volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 27104412914377898, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
-      propertyPath: stepInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 27104412914377898, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
-      propertyPath: 'footstepClips.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 7a7da10fe25985849b748e0f8772d3cb, type: 3}
     - target: {fileID: 2202398671292178099, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_Name
       value: Player

@@ -314,13 +314,13 @@ MonoBehaviour:
   footstepSource: {fileID: 5859344784478819324}
   playerController: {fileID: 3204421008636900460}
   footstepClips:
-  - {fileID: 8300000, guid: 8bef153fa3c0995479c1fad9883d827e, type: 3}
+  - {fileID: 8300000, guid: 7a7da10fe25985849b748e0f8772d3cb, type: 3}
   - {fileID: 8300000, guid: 7a7b440df2195214aa65fbc39884368a, type: 3}
   - {fileID: 8300000, guid: f4f969ef3f97a5542ad6665b69a37790, type: 3}
   - {fileID: 8300000, guid: 7a7da10fe25985849b748e0f8772d3cb, type: 3}
-  stepInterval: 0.5
+  stepInterval: 1
   minVelocity: 0.1
-  volume: 10
+  volume: 0.5
   pitchRandomness: 0.08
 --- !u!114 &6981414815247998667
 MonoBehaviour:
@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 4740399289021359223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037, y: 0.451, z: 0.087}
+  m_LocalPosition: {x: 0.037, y: 0.451, z: 0.219}
   m_LocalScale: {x: 1, y: 0.6896552, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

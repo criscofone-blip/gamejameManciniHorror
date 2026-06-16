@@ -26,6 +26,9 @@ public class CutsceneManager : MonoBehaviour
 
     private void Update()
     {
+        if (Keyboard.current == null)
+            return;
+
         if (Keyboard.current.escapeKey.wasPressedThisFrame ||
             Keyboard.current.spaceKey.wasPressedThisFrame)
         {
