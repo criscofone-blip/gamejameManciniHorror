@@ -434,8 +434,9 @@ GameObject:
   - component: {fileID: 5323152795258897850}
   - component: {fileID: 953318309322066338}
   - component: {fileID: 7926896835793760591}
+  - component: {fileID: 2933877900206395490}
   m_Layer: 0
-  m_Name: Enemy_1
+  m_Name: Enemy_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -574,7 +575,7 @@ MonoBehaviour:
   player: {fileID: 0}
   gameOverManager: {fileID: 0}
   viewDistance: 17
-  viewAngle: 180
+  viewAngle: 245.8
   eyeHeight: -0.53
   visionMask:
     serializedVersion: 2
@@ -619,6 +620,22 @@ MonoBehaviour:
   minMoveSpeed: 0.05
   footstepVolume: 5.59
   pitchRandomness: 0.08
+--- !u!114 &2933877900206395490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537758118342221820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be740161d06f700408b5fa05388527b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimator
+  animator: {fileID: 1237562427021826694}
+  speedParameter: Speed
+  chasingParameter: IsChasing
+  speedDampTime: 0.1
 --- !u!1001 &7696870917484757263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -694,7 +711,7 @@ Animator:
   m_GameObject: {fileID: 7354851532102958174}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c9232cb01569c141b2357053ecc70b3, type: 2}
+  m_Controller: {fileID: 9100000, guid: e004420b130a2204a939657a7c335b46, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
