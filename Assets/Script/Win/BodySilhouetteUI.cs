@@ -71,4 +71,5 @@ public class BodySilhouetteUI : MonoBehaviour
                 break;
         }
     }
+    
 }
