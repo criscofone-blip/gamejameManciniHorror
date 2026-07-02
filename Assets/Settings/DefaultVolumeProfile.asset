@@ -161,16 +161,16 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.88
+    m_Value: 1.4
   contrast:
     m_OverrideState: 1
-    m_Value: 41.9
+    m_Value: 53.9
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: -82
+    m_Value: 21
   saturation:
     m_OverrideState: 1
     m_Value: -100
@@ -195,7 +195,7 @@ MonoBehaviour:
     m_Value: 0
   response:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 0.822
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -912,7 +912,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.211
+    m_Value: 0
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
