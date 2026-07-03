@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeddyBear_Legs
       objectReference: {fileID: 0}
+    - target: {fileID: 1156197017429641389, guid: c60fb5a8423902346af33b9fbb06ce1e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

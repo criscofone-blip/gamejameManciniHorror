@@ -106,7 +106,7 @@ MonoBehaviour:
     m_Value: 0
   clamp:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.047
 --- !u!114 &-7274224791359825572
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -164,13 +164,13 @@ MonoBehaviour:
     m_Value: 1.4
   contrast:
     m_OverrideState: 1
-    m_Value: 53.9
+    m_Value: 65.5
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: 21
+    m_Value: 34
   saturation:
     m_OverrideState: 1
     m_Value: -100
@@ -192,10 +192,10 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.355
   response:
     m_OverrideState: 1
-    m_Value: 0.822
+    m_Value: 0.788
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.147
   cropToFit:
     m_OverrideState: 1
     m_Value: 1
@@ -314,16 +314,16 @@ MonoBehaviour:
   active: 1
   normalBias:
     m_OverrideState: 1
-    m_Value: 0.33
+    m_Value: 0.422
   viewBias:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.716
   scaleBiasWithMinProbeDistance:
     m_OverrideState: 1
     m_Value: 0
   samplingNoise:
     m_OverrideState: 1
-    m_Value: 0.154
+    m_Value: 0.095
   animateSamplingNoise:
     m_OverrideState: 1
     m_Value: 1
@@ -369,7 +369,7 @@ MonoBehaviour:
     m_Value: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.704
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -528,13 +528,13 @@ MonoBehaviour:
     m_Value: 0
   streaksThreshold:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.421
   resolution:
     m_OverrideState: 1
     m_Value: 4
   chromaticAbberationIntensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0
 --- !u!114 &1052315754049611418
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -793,7 +793,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 1
     m_Value: 10
@@ -802,7 +802,7 @@ MonoBehaviour:
     m_Value: 30
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.047
   highQualitySampling:
     m_OverrideState: 1
     m_Value: 0
@@ -814,7 +814,7 @@ MonoBehaviour:
     m_Value: 5.6
   focalLength:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 123.5
   bladeCount:
     m_OverrideState: 1
     m_Value: 5
@@ -890,10 +890,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.171
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.457
   rounded:
     m_OverrideState: 1
     m_Value: 0
@@ -924,7 +924,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.98
 --- !u!114 &9001657382290151224
 MonoBehaviour:
   m_ObjectHideFlags: 3
