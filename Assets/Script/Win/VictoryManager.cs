@@ -14,32 +14,18 @@ public class VictoryManager : MonoBehaviour
     [Header("Victory Cutscenes")]
     [SerializeField] private VideoClip[] victoryCutscenes;
 
-    private BodyPartCollectionManager collectionManager;
     private bool hasWon;
 
     private void Start()
     {
         Time.timeScale = 1f;
 
-        collectionManager = BodyPartCollectionManager.Instance;
-
-        if (collectionManager == null)
-            collectionManager = FindFirstObjectByType<BodyPartCollectionManager>();
-
-        if (collectionManager != null)
-            collectionManager.OnAllBodyPartsCollected += HandleVictory;
-
         if (victoryPanel != null)
             victoryPanel.SetActive(false);
     }
 
-    private void OnDestroy()
-    {
-        if (collectionManager != null)
-            collectionManager.OnAllBodyPartsCollected -= HandleVictory;
-    }
-
-    private void HandleVictory()
+    // Chiamato dal punto di consegna (BodyDeliveryPoint) quando il livello va completato.
+    public void CompleteLevel()
     {
         if (hasWon)
             return;

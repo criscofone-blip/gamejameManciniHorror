@@ -3945,7 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cf71be3ad4594bbcbb09749e87498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
-  gameSceneName: Scena Lavoro Cristian
+  gameSceneName: Cri3
   cutsceneSceneName: CutsceneScene
   introVideoClip: {fileID: 32900000, guid: 2b35dfa31e8fc034582643aafa7d4980, type: 3}
   mainPanel: {fileID: 915824164}

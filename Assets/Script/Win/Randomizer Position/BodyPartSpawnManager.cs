@@ -27,6 +27,13 @@ public class BodyPartSpawnManager : MonoBehaviour
             legsPrefab
         };
 
+        // Spegni le luci di tutti gli spawn point: le accenderemo solo dove spawna un pezzo.
+        foreach (var point in spawnPoints)
+        {
+            if (point != null)
+                point.SetLightActive(false);
+        }
+
         // Mischia spawn points
         List<BodyPartSpawnPoint> shuffled = new List<BodyPartSpawnPoint>(spawnPoints);
         ShuffleList(shuffled);
@@ -51,6 +58,9 @@ public class BodyPartSpawnManager : MonoBehaviour
                 point.transform.position,
                 point.transform.rotation
             );
+
+            // Qui è spawnato un pezzo → accendi la luce di questo spawn point.
+            point.SetLightActive(true);
 
             usedRooms.Add(point.roomType);
             spawned++;
