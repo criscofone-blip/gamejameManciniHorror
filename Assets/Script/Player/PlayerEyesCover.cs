@@ -1,17 +1,26 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class PlayerEyesCover : MonoBehaviour
 {
     public static bool EyesCovered { get; private set; }
-    [SerializeField] private AudioMixerSnapshot normalSnapshot;
-    [SerializeField] private AudioMixerSnapshot effectSnapshot;
+
     [Header("Input")]
     [SerializeField] private InputActionReference coverEyesAction;
 
-    [Header("UI")]
-    [SerializeField] private GameObject eyesCoveredPanel;
+    [Header("Eyelids (UI)")]
+    [Tooltip("Palpebra superiore: pivot Y = 1, ancorata alla metà alta dello schermo.")]
+    [SerializeField] private RectTransform topEyelid;
+    [Tooltip("Palpebra inferiore: pivot Y = 0, ancorata alla metà bassa dello schermo.")]
+    [SerializeField] private RectTransform bottomEyelid;
+
+    [Header("Animation")]
+    [SerializeField] private float closeDuration = 0.12f;
+    [SerializeField] private float openDuration = 0.18f;
+
+    private float closeAmount;   // 0 = occhi aperti, 1 = occhi chiusi
+    private Coroutine animRoutine;
 
     private void OnEnable()
     {
@@ -25,7 +34,9 @@ public class PlayerEyesCover : MonoBehaviour
 
     private void Start()
     {
-        SetEyesCovered(false);
+        EyesCovered = false;
+        closeAmount = 0f;
+        ApplyCloseAmount(0f); // palpebre aperte (collassate ai bordi)
     }
 
     private void Update()
@@ -39,16 +50,57 @@ public class PlayerEyesCover : MonoBehaviour
 
     private void SetEyesCovered(bool covered)
     {
+        // Gameplay: effetto immediato (il nemico si congela senza ritardo).
         EyesCovered = covered;
 
-        if (eyesCoveredPanel != null)
-            eyesCoveredPanel.SetActive(covered);
+        // Visivo: animazione palpebre.
+        if (animRoutine != null)
+            StopCoroutine(animRoutine);
 
-        if (covered)
-            effectSnapshot.TransitionTo(0.2f);
-        else
-            normalSnapshot.TransitionTo(0.2f);
+        animRoutine = StartCoroutine(AnimateEyelids(covered));
+    }
 
+    private IEnumerator AnimateEyelids(bool closing)
+    {
+        float target = closing ? 1f : 0f;
+        float start = closeAmount;
+        float duration = closing ? closeDuration : openDuration;
 
+        if (duration <= 0f)
+        {
+            ApplyCloseAmount(target);
+            yield break;
+        }
+
+        float t = 0f;
+        while (t < duration)
+        {
+            // unscaledDeltaTime: l'animazione gira anche con Time.timeScale = 0.
+            t += Time.unscaledDeltaTime;
+            float k = Mathf.Clamp01(t / duration);
+            ApplyCloseAmount(Mathf.Lerp(start, target, k));
+            yield return null;
+        }
+
+        ApplyCloseAmount(target);
+    }
+
+    private void ApplyCloseAmount(float amount)
+    {
+        closeAmount = amount;
+
+        if (topEyelid != null)
+        {
+            Vector3 s = topEyelid.localScale;
+            s.y = amount;
+            topEyelid.localScale = s;
+        }
+
+        if (bottomEyelid != null)
+        {
+            Vector3 s = bottomEyelid.localScale;
+            s.y = amount;
+            bottomEyelid.localScale = s;
+        }
     }
 }
