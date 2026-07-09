@@ -269,7 +269,7 @@ MonoBehaviour:
   interactionDistance: 7
   interactionMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4294967295
 --- !u!114 &4373786437888079609
 MonoBehaviour:
   m_ObjectHideFlags: 0

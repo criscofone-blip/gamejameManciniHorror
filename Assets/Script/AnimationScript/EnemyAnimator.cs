@@ -22,6 +22,10 @@ public class EnemyAnimator : MonoBehaviour
     private int speedHash;
     private int chasingHash;
 
+    // Impostati a true solo se il parametro esiste davvero nel Controller.
+    private bool hasSpeedParam;
+    private bool hasChasingParam;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -32,6 +36,10 @@ public class EnemyAnimator : MonoBehaviour
 
         speedHash = Animator.StringToHash(speedParameter);
         chasingHash = Animator.StringToHash(chasingParameter);
+
+        // Verifica una sola volta quali parametri esistono, così evitiamo lo spam di warning.
+        hasSpeedParam = HasParameter(speedHash, AnimatorControllerParameterType.Float);
+        hasChasingParam = HasParameter(chasingHash, AnimatorControllerParameterType.Bool);
     }
 
     private void Update()
@@ -39,16 +47,36 @@ public class EnemyAnimator : MonoBehaviour
         if (animator == null)
             return;
 
-        // Velocità orizzontale reale dell'agent (ignora la componente verticale).
-        Vector3 velocity = agent.velocity;
-        velocity.y = 0f;
-        float speed = velocity.magnitude;
+        if (hasSpeedParam)
+        {
+            // Velocità orizzontale reale dell'agent (ignora la componente verticale).
+            Vector3 velocity = agent.velocity;
+            velocity.y = 0f;
+            float speed = velocity.magnitude;
 
-        // Speed → controlla Idle (fermo) vs Walk (Wander/Investigate) nell'Animator.
-        animator.SetFloat(speedHash, speed, speedDampTime, Time.deltaTime);
+            // Speed → controlla Idle (fermo) vs Walk (Wander/Investigate) nell'Animator.
+            animator.SetFloat(speedHash, speed, speedDampTime, Time.deltaTime);
+        }
 
-        // IsChasing → passaggio all'animazione di inseguimento.
-        bool isChasing = enemy.CurrentState == EnemyVisionChase.EnemyState.Chase;
-        animator.SetBool(chasingHash, isChasing);
+        if (hasChasingParam)
+        {
+            // IsChasing → passaggio all'animazione di inseguimento.
+            bool isChasing = enemy.CurrentState == EnemyVisionChase.EnemyState.Chase;
+            animator.SetBool(chasingHash, isChasing);
+        }
+    }
+
+    private bool HasParameter(int paramHash, AnimatorControllerParameterType type)
+    {
+        if (animator == null)
+            return false;
+
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.nameHash == paramHash && param.type == type)
+                return true;
+        }
+
+        return false;
     }
 }
