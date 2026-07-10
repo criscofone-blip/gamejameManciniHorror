@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverUI;
+    [Header("Panels (indice = monster index del nemico)")]
+    [SerializeField] private GameOverPanel[] panels;
+
+    [Header("Scenes")]
+    [SerializeField] private string menuSceneName = "MainMenu";
 
     private bool isGameOver;
 
@@ -11,23 +15,34 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (gameOverUI != null)
-            gameOverUI.SetActive(false);
+        if (panels != null)
+        {
+            foreach (GameOverPanel panel in panels)
+            {
+                if (panel != null)
+                    panel.Hide();
+            }
+        }
     }
 
-    public void TriggerGameOver()
+    public void TriggerGameOver(int monsterIndex)
     {
         if (isGameOver)
             return;
 
         isGameOver = true;
 
-        if (gameOverUI != null)
-            gameOverUI.SetActive(true);
-
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        if (panels != null && panels.Length > 0)
+        {
+            int index = Mathf.Clamp(monsterIndex, 0, panels.Length - 1);
+
+            if (panels[index] != null)
+                panels[index].Show();
+        }
     }
 
     // 🔁 RICOMINCIA
@@ -37,11 +52,10 @@ public class GameOverManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // 🚪 ESCI
-    public void QuitGame()
+    // 🏠 TORNA AL MENÙ
+    public void LoadMenu()
     {
-        Debug.Log("Quit Game");
-
-        Application.Quit();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(menuSceneName);
     }
 }

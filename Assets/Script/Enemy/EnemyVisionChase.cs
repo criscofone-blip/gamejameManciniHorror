@@ -37,6 +37,8 @@ public class EnemyVisionChase : MonoBehaviour
 
     [Header("Game Over")]
     [SerializeField] private float killDistance = 1.5f;
+    [Tooltip("Indice del mostro (0/1/2): sceglie il pannello di game over.")]
+    [SerializeField] private int monsterIndex = 0;
 
     [Header("Debug")]
     [SerializeField] private bool showDebugLogs = false;
@@ -250,7 +252,7 @@ public class EnemyVisionChase : MonoBehaviour
         if (distanceToPlayer <= killDistance)
         {
             if (gameOverManager != null)
-                gameOverManager.TriggerGameOver();
+                gameOverManager.TriggerGameOver(monsterIndex);
         }
     }
 

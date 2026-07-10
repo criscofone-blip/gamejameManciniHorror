@@ -589,6 +589,7 @@ MonoBehaviour:
   investigateSpeed: 6.93
   chaseSpeed: 8.93
   killDistance: 1.24
+  monsterIndex: 2
   showDebugLogs: 1
 --- !u!114 &7926896835793760591
 MonoBehaviour:
