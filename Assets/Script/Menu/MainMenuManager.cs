@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,6 +23,19 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Transform saveSlotsContainer;
     [SerializeField] private SaveSlotButton saveSlotButtonPrefab;
 
+    [Header("Background Video")]
+    [SerializeField] private VideoPlayer menuVideoPlayer;
+    [SerializeField] private RawImage videoImage;
+    [SerializeField] private AudioSource videoAudioSource;
+
+    [Header("Buttons Intro")]
+    [Tooltip("Gruppo dei bottoni del menù principale che appare dopo il ritardo.")]
+    [SerializeField] private GameObject mainButtonsContainer;
+    [Tooltip("Secondi prima che compaiano i tasti del menù principale.")]
+    [SerializeField] private float buttonsDelay = 5f;
+
+    private bool buttonsRevealed;
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -29,8 +43,61 @@ public class MainMenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        StartBackgroundVideo();
         CreateSaveSlots();
         OpenPanel(mainPanel);
+
+        // Intro una tantum: nascondi i tasti del menù principale e mostrali dopo il ritardo.
+        if (mainButtonsContainer != null)
+        {
+            mainButtonsContainer.SetActive(false);
+            StartCoroutine(RevealButtonsAfterDelay());
+        }
+    }
+
+    private void StartBackgroundVideo()
+    {
+        if (menuVideoPlayer == null)
+            return;
+
+        menuVideoPlayer.isLooping = true;
+
+        if (videoAudioSource != null)
+        {
+            menuVideoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            menuVideoPlayer.SetTargetAudioSource(0, videoAudioSource);
+        }
+
+        menuVideoPlayer.prepareCompleted -= OnVideoPrepared;
+        menuVideoPlayer.prepareCompleted += OnVideoPrepared;
+        menuVideoPlayer.Prepare();
+    }
+
+    private void OnVideoPrepared(VideoPlayer vp)
+    {
+        if (videoImage != null)
+            videoImage.texture = vp.texture;
+
+        vp.Play();
+
+        if (videoAudioSource != null)
+            videoAudioSource.Play();
+    }
+
+    private IEnumerator RevealButtonsAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(buttonsDelay);
+
+        buttonsRevealed = true;
+
+        if (mainButtonsContainer != null)
+            mainButtonsContainer.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        if (menuVideoPlayer != null)
+            menuVideoPlayer.prepareCompleted -= OnVideoPrepared;
     }
 
     private void CreateSaveSlots()
