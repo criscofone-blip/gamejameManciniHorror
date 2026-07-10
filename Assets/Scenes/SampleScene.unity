@@ -45688,6 +45688,22 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1808171560816712928, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 1808171560816712928, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149492220152036411, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 2149492220152036411, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2705679620618637344, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -300
@@ -45816,6 +45832,22 @@ PrefabInstance:
       propertyPath: videoPlayer
       value: 
       objectReference: {fileID: 597177194}
+    - target: {fileID: 5533451888095924222, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533451888095924222, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 5533451888095924222, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533451888095924222, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6164975745058367124, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_Name
       value: GameOverPanel_1
@@ -45824,6 +45856,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6195068059167677852, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195068059167677852, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 6195068059167677852, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195068059167677852, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6505162403331017152, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_Name
       value: CanvasHUD
@@ -45831,6 +45879,22 @@ PrefabInstance:
     - target: {fileID: 6505162403331017152, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695016431333175902, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695016431333175902, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 6695016431333175902, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695016431333175902, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7497655632923599367, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -45848,9 +45912,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -170
       objectReference: {fileID: 0}
+    - target: {fileID: 8107112390406730401, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
+    - target: {fileID: 8107112390406730401, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
+    - target: {fileID: 8107112390406730401, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146012310040844836, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1773628722}
+    - target: {fileID: 8146012310040844836, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 9185688447141400268, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68672,52 +68756,6 @@ Transform:
   - {fileID: 257715105}
   - {fileID: 1025123273}
   m_Father: {fileID: 1529010020}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &885858373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 885858375}
-  - component: {fileID: 885858374}
-  m_Layer: 0
-  m_Name: GameOverManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &885858374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885858373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d1e8f4eabc5980478c5226841e2b435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameOverManager
-  panels: []
-  menuSceneName: MainMenu
---- !u!4 &885858375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885858373}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &885975786
 PrefabInstance:
@@ -136059,6 +136097,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81b40c2d8dc37b149bb0046b3d7170c5, type: 3}
   m_PrefabInstance: {fileID: 1773026652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1773628722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 503640301142803840, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
+  m_PrefabInstance: {fileID: 201817263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1e8f4eabc5980478c5226841e2b435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverManager
 --- !u!1001 &1774235023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167172,7 +167221,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1323711740}
   - {fileID: 1310375249}
-  - {fileID: 885858375}
   - {fileID: 3179516069486960139}
   - {fileID: 597177190}
   - {fileID: 1167413470}
