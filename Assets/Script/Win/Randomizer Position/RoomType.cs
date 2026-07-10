@@ -6,5 +6,6 @@ public enum RoomType
     Room,
     Library,
     Kitchen,
-    Childroom
+    Childroom,
+    Balcony
 }
