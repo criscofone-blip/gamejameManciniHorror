@@ -215,6 +215,17 @@
                     "action": "OpenMenuInGame",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28cc93ec-9acd-4abc-baf4-8873732e82bf",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMenuInGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

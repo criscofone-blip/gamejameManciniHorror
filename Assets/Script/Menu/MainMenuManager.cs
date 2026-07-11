@@ -39,8 +39,6 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private RawImage creditsVideoImage;
     [SerializeField] private AudioSource creditsAudioSource;
 
-    private bool buttonsRevealed;
-
     private void Start()
     {
         Time.timeScale = 1f;
@@ -92,8 +90,6 @@ public class MainMenuManager : MonoBehaviour
     private IEnumerator RevealButtonsAfterDelay()
     {
         yield return new WaitForSecondsRealtime(buttonsDelay);
-
-        buttonsRevealed = true;
 
         if (mainButtonsContainer != null)
             mainButtonsContainer.SetActive(true);

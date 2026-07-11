@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenuInGame : MonoBehaviour
 {
@@ -12,6 +11,10 @@ public class MenuInGame : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject MenuInGamePanel;
+    [SerializeField] private GameObject comandiPanel;
+
+    [Header("Scenes")]
+    [SerializeField] private string menuSceneName = "MainMenu";
 
     private void OnEnable()
     {
@@ -32,7 +35,7 @@ public class MenuInGame : MonoBehaviour
     {
         if (openMenuAction.action.WasPressedThisFrame())
         {
-            if(OpenedMenu)
+            if (OpenedMenu)
             {
                 OpenMenuInGame(false);
             }
@@ -41,10 +44,7 @@ public class MenuInGame : MonoBehaviour
                 OpenMenuInGame(true);
                 CursorInMenu();
             }
-
-           
         }
-          
     }
 
     public void OpenMenuInGame(bool opened)
@@ -54,7 +54,11 @@ public class MenuInGame : MonoBehaviour
         if (MenuInGamePanel != null)
             MenuInGamePanel.SetActive(opened);
 
-        if(!OpenedMenu)
+        // Il pannello Comandi parte sempre chiuso.
+        if (comandiPanel != null)
+            comandiPanel.SetActive(false);
+
+        if (!OpenedMenu)
         {
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
@@ -70,32 +74,10 @@ public class MenuInGame : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else
-        {
-            return;
-        }
-        
     }
 
-
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        OpenMenuInGame(false);
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("Quit Game");
-
-        Application.Quit();
-
-        OpenMenuInGame(false);
-    }
-
-    public void Riprendi()
+    // ▶️ CONTINUA – riprende il gioco
+    public void Continua()
     {
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
@@ -103,5 +85,33 @@ public class MenuInGame : MonoBehaviour
         OpenMenuInGame(false);
     }
 
+    // 🔁 RICOMINCIA – ricarica il livello corrente
+    public void Ricomincia()
+    {
+        Time.timeScale = 1f;
+        OpenMenuInGame(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+    // 🎮 COMANDI – apre il pannello con l'immagine dei comandi
+    public void ApriComandi()
+    {
+        if (comandiPanel != null)
+            comandiPanel.SetActive(true);
+    }
+
+    // ↩️ Indietro dal pannello Comandi
+    public void ChiudiComandi()
+    {
+        if (comandiPanel != null)
+            comandiPanel.SetActive(false);
+    }
+
+    // 🏠 ESCI – torna al menù principale
+    public void Esci()
+    {
+        Time.timeScale = 1f;
+        OpenMenuInGame(false);
+        SceneManager.LoadScene(menuSceneName);
+    }
 }
