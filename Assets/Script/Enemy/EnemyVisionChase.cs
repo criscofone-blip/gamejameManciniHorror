@@ -35,6 +35,14 @@ public class EnemyVisionChase : MonoBehaviour
     [SerializeField] private float investigateSpeed = 2.5f;
     [SerializeField] private float chaseSpeed = 4f;
 
+    [Header("Anti-Stuck")]
+    [Tooltip("Sotto questa velocità (m/s) l'agent è considerato potenzialmente bloccato.")]
+    [SerializeField] private float stuckSpeedThreshold = 0.1f;
+    [Tooltip("Secondi di quasi-immobilità (mentre dovrebbe muoversi) prima di forzare una via di fuga.")]
+    [SerializeField] private float stuckTimeToUnstuck = 1f;
+    [Tooltip("Quanti punti campionare per trovare una via di fuga raggiungibile.")]
+    [SerializeField] private int stuckSampleAttempts = 8;
+
     [Header("Game Over")]
     [SerializeField] private float killDistance = 1.5f;
     [Tooltip("Indice del mostro (0/1/2): sceglie il pannello di game over.")]
@@ -49,11 +57,14 @@ public class EnemyVisionChase : MonoBehaviour
     private float investigateTimer;
     private Vector3 lastSeenPlayerPosition;
     private bool wasFrozen;
+    private float stuckTimer;
+    private NavMeshPath cachedPath;
     public EnemyState CurrentState => currentState;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        cachedPath = new NavMeshPath();
 
         if (player == null)
         {
@@ -121,6 +132,9 @@ public class EnemyVisionChase : MonoBehaviour
                     UpdateInvestigate();
                 break;
         }
+
+        // Dopo aver aggiornato lo stato, controlla se è rimasto bloccato.
+        DetectAndResolveStuck();
     }
 
     private void FreezeEnemy()
@@ -306,12 +320,153 @@ public class EnemyVisionChase : MonoBehaviour
 
     private void SetNewWanderPoint()
     {
+        // Preferisci un punto con percorso COMPLETO: evita di puntare verso posti irraggiungibili.
+        if (TryFindReachablePoint(out Vector3 reachablePoint))
+        {
+            agent.SetDestination(reachablePoint);
+            return;
+        }
+
+        // Fallback: comportamento originale.
         Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
         randomDirection += transform.position;
         randomDirection.y = transform.position.y;
 
         if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, wanderRadius, NavMesh.AllAreas))
             agent.SetDestination(hit.position);
+    }
+
+    // ---------- Anti-Stuck ----------
+
+    private void DetectAndResolveStuck()
+    {
+        // Niente da controllare se è fermo di proposito o senza percorso.
+        if (agent.isStopped || agent.pathPending || !agent.hasPath)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        // È praticamente arrivato: non è bloccato.
+        if (agent.remainingDistance <= agent.stoppingDistance + 0.1f)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        // In Investigate la pausa di rotazione è un fermo voluto.
+        if (currentState == EnemyState.Investigate && agent.remainingDistance <= investigateStopDistance)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        // Dovrebbe muoversi ma è quasi fermo → accumula tempo di blocco.
+        if (agent.velocity.sqrMagnitude < stuckSpeedThreshold * stuckSpeedThreshold)
+        {
+            stuckTimer += Time.deltaTime;
+
+            if (stuckTimer >= stuckTimeToUnstuck)
+            {
+                stuckTimer = 0f;
+                ResolveStuck();
+            }
+        }
+        else
+        {
+            stuckTimer = 0f;
+        }
+    }
+
+    private void ResolveStuck()
+    {
+        if (showDebugLogs)
+            Debug.Log("[Enemy] Bloccato → cerco una via di fuga");
+
+        switch (currentState)
+        {
+            case EnemyState.Chase:
+                // Riprova un percorso completo verso il player; se non c'è, fuggi vagando.
+                if (!TrySetDestinationTo(player.position))
+                    GoWanderEscape();
+                break;
+
+            case EnemyState.Investigate:
+                GoWanderEscape();
+                break;
+
+            case EnemyState.Wander:
+                if (!SetEscapePoint())
+                    SetNewWanderPoint();
+                break;
+        }
+    }
+
+    private void GoWanderEscape()
+    {
+        currentState = EnemyState.Wander;
+        agent.speed = wanderSpeed;
+        wanderTimer = 0f;
+
+        if (!SetEscapePoint())
+            SetNewWanderPoint();
+    }
+
+    private bool SetEscapePoint()
+    {
+        if (TryFindReachablePoint(out Vector3 point))
+        {
+            agent.SetDestination(point);
+            return true;
+        }
+
+        return false;
+    }
+
+    // Campiona più punti e sceglie il raggiungibile (percorso completo) più lontano.
+    private bool TryFindReachablePoint(out Vector3 result)
+    {
+        float bestDistance = -1f;
+        Vector3 best = transform.position;
+        bool found = false;
+
+        for (int i = 0; i < stuckSampleAttempts; i++)
+        {
+            Vector3 randomDir = Random.insideUnitSphere * wanderRadius;
+            randomDir += transform.position;
+            randomDir.y = transform.position.y;
+
+            if (!NavMesh.SamplePosition(randomDir, out NavMeshHit hit, wanderRadius, NavMesh.AllAreas))
+                continue;
+
+            if (!agent.CalculatePath(hit.position, cachedPath) || cachedPath.status != NavMeshPathStatus.PathComplete)
+                continue;
+
+            float d = (hit.position - transform.position).sqrMagnitude;
+
+            if (d > bestDistance)
+            {
+                bestDistance = d;
+                best = hit.position;
+                found = true;
+            }
+        }
+
+        result = best;
+        return found;
+    }
+
+    // Imposta la destinazione solo se esiste un percorso completo verso il target.
+    private bool TrySetDestinationTo(Vector3 target)
+    {
+        if (!NavMesh.SamplePosition(target, out NavMeshHit hit, 3f, NavMesh.AllAreas))
+            return false;
+
+        if (!agent.CalculatePath(hit.position, cachedPath) || cachedPath.status != NavMeshPathStatus.PathComplete)
+            return false;
+
+        agent.SetDestination(hit.position);
+        return true;
     }
 
     private bool ReachedDestination()
