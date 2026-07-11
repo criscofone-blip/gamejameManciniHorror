@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3727436413489925632}
   - component: {fileID: 2812655142028584180}
   - component: {fileID: 3892608120460375259}
+  - component: {fileID: -8424540716319804614}
   m_Layer: 6
   m_Name: BodyLegs
   m_TagString: Untagged
@@ -157,6 +158,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.46, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0.02, z: 0}
+--- !u!114 &-8424540716319804614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655365789799319601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d41f259d2f595c4c9731e135e66625d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupObject
 --- !u!1001 &6787375949007689152
 PrefabInstance:
   m_ObjectHideFlags: 0

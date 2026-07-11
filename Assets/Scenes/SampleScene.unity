@@ -166640,8 +166640,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2202398671292178099, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3179516069486960141}
   m_SourcePrefab: {fileID: 100100000, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+--- !u!1 &3179516069486960140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2202398671292178099, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+  m_PrefabInstance: {fileID: 3179516069486960139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3179516069486960141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179516069486960140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b87213dd8d038241aa2459cf26757bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickupAudio
+  audioSource: {fileID: 0}
+  pickupClip: {fileID: 8300000, guid: 5b545f11fc833db498d21d5f72622592, type: 3}
 --- !u!1001 &3382440714876905085
 PrefabInstance:
   m_ObjectHideFlags: 0

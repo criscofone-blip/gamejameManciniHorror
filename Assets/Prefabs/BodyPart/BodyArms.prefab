@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 749874726715905052}
   - component: {fileID: 6074598959575287793}
   - component: {fileID: 2162174550716532962}
+  - component: {fileID: 4287378047143579787}
   m_Layer: 6
   m_Name: BodyArms
   m_TagString: Untagged
@@ -157,6 +158,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.43, z: 0.22}
   m_Center: {x: 0, y: -0.03, z: 0}
+--- !u!114 &4287378047143579787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179017602033391490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d41f259d2f595c4c9731e135e66625d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupObject
 --- !u!1001 &6258153985426195668
 PrefabInstance:
   m_ObjectHideFlags: 0
