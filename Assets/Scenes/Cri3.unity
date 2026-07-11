@@ -14007,7 +14007,7 @@ PrefabInstance:
     - target: {fileID: 8698020003152710750, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
       propertyPath: victoryPanel
       value: 
-      objectReference: {fileID: 597177191}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698020003152710750, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
       propertyPath: gameSceneName
       value: Cri3
@@ -42348,11 +42348,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
---- !u!1 &597177191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 833479697286584812, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
-  m_PrefabInstance: {fileID: 597177190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &597325548
 GameObject:
   m_ObjectHideFlags: 0
@@ -122540,75 +122535,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81b40c2d8dc37b149bb0046b3d7170c5, type: 3}
   m_PrefabInstance: {fileID: 1750308604}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1750874766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1750874769}
-  - component: {fileID: 1750874768}
-  - component: {fileID: 1750874767}
-  m_Layer: 6
-  m_Name: Victory Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1750874767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750874766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532042e4028b98248bc490111ca2cae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BodyDeliveryPoint
-  victoryManager: {fileID: 1068569145}
-  readyText: Premi E per deporre il cadavere
-  missingPartsText: Devi trovare tutti i pezzi
---- !u!65 &1750874768
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750874766}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.07, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1750874769
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750874766}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.22041877, z: -0, w: 0.97540534}
-  m_LocalPosition: {x: 11.297, y: 0.023, z: -2.362}
-  m_LocalScale: {x: 3.2412, y: 0.67991, z: 1.647}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 25.467, z: 0}
 --- !u!1001 &1751012987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151947,6 +151873,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27bc38b544f5a4b47b4a30fc5049ad5e, type: 3}
+--- !u!1001 &5416133441868531224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 695120412204241172, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_Name
+      value: Victory Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661944152328815217, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: victoryManager
+      value: 
+      objectReference: {fileID: 1068569145}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.97540534
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.22041877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 25.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
 --- !u!1001 &5452762748414963567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152294,7 +152281,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 201817263}
-  - {fileID: 1750874769}
+  - {fileID: 5416133441868531224}
   - {fileID: 832575519}
   - {fileID: 1323711740}
   - {fileID: 1310375249}

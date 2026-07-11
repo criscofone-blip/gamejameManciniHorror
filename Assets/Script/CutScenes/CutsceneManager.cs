@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using UnityEngine.InputSystem;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -11,8 +10,14 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] private RawImage videoImage;
     [SerializeField] private AudioSource audioSource;
 
+    [Header("UI")]
+    [Tooltip("Bottone di skip: mostrato solo negli step skippabili.")]
+    [SerializeField] private GameObject skipButton;
+
     [Header("Fallback")]
     [SerializeField] private string defaultNextSceneName = "MainScene";
+
+    private int currentStepIndex;
 
     private void Start()
     {
@@ -21,38 +26,45 @@ public class CutsceneManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        PlayRequestedCutscene();
+        currentStepIndex = 0;
+        PlayCurrentStep();
     }
 
-    private void Update()
+    private void PlayCurrentStep()
     {
-        if (Keyboard.current == null)
+        var steps = CutsceneRequest.Steps;
+
+        if (steps == null || currentStepIndex >= steps.Count)
+        {
+            EndCutscenes();
             return;
-
-        if (Keyboard.current.escapeKey.wasPressedThisFrame ||
-            Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            FinishCutscene();
         }
-    }
 
-    private void PlayRequestedCutscene()
-    {
-        VideoClip clip = CutsceneRequest.VideoClip;
+        CutsceneRequest.Step step = steps[currentStepIndex];
 
-        if (clip == null)
+        // Il tasto skip appare solo se questo step è skippabile (i credits no).
+        if (skipButton != null)
+            skipButton.SetActive(step.skippable);
+
+        if (step.clip == null)
         {
-            FinishCutscene();
+            OnStepEnded();
             return;
         }
 
         videoPlayer.source = VideoSource.VideoClip;
-        videoPlayer.clip = clip;
+        videoPlayer.clip = step.clip;
+        videoPlayer.isLooping = false;
 
-        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-        videoPlayer.SetTargetAudioSource(0, audioSource);
+        if (audioSource != null)
+        {
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            videoPlayer.SetTargetAudioSource(0, audioSource);
+        }
 
+        videoPlayer.prepareCompleted -= OnVideoPrepared;
         videoPlayer.prepareCompleted += OnVideoPrepared;
+        videoPlayer.loopPointReached -= OnVideoFinished;
         videoPlayer.loopPointReached += OnVideoFinished;
 
         videoPlayer.Prepare();
@@ -60,7 +72,9 @@ public class CutsceneManager : MonoBehaviour
 
     private void OnVideoPrepared(VideoPlayer source)
     {
-        videoImage.texture = source.texture;
+        if (videoImage != null)
+            videoImage.texture = source.texture;
+
         source.Play();
 
         if (audioSource != null)
@@ -69,14 +83,35 @@ public class CutsceneManager : MonoBehaviour
 
     private void OnVideoFinished(VideoPlayer source)
     {
-        FinishCutscene();
+        OnStepEnded();
     }
 
-    private void FinishCutscene()
+    // Collegato al bottone Skip: salta solo se lo step corrente è skippabile.
+    public void Skip()
+    {
+        var steps = CutsceneRequest.Steps;
+
+        if (steps == null || currentStepIndex >= steps.Count)
+            return;
+
+        if (!steps[currentStepIndex].skippable)
+            return;
+
+        OnStepEnded();
+    }
+
+    private void OnStepEnded()
     {
         videoPlayer.prepareCompleted -= OnVideoPrepared;
         videoPlayer.loopPointReached -= OnVideoFinished;
+        videoPlayer.Stop();
 
+        currentStepIndex++;
+        PlayCurrentStep();
+    }
+
+    private void EndCutscenes()
+    {
         if (CutsceneRequest.IncreaseDifficultyAfterCutscene && GameManager.Instance != null)
             GameManager.Instance.IncreaseDifficultyAndSave();
 
