@@ -15809,6 +15809,14 @@ PrefabInstance:
       propertyPath: 'victoryCutscenes.Array.data[1]'
       value: 
       objectReference: {fileID: 32900000, guid: 59c338631670d184bb287a4f9b7d2a98, type: 3}
+    - target: {fileID: 8698020003152710750, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
+      propertyPath: 'victoryCutscenes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 32900000, guid: 1dea54f079270d74eb121b8d2af4e745, type: 3}
+    - target: {fileID: 8698020003152710750, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
+      propertyPath: 'victoryCutscenes.Array.data[3]'
+      value: 
+      objectReference: {fileID: 32900000, guid: a584d3efea0195046a994c9580324c1c, type: 3}
     - target: {fileID: 8865836337149204406, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.328
