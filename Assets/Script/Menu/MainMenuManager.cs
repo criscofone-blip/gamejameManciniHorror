@@ -63,6 +63,7 @@ public class MainMenuManager : MonoBehaviour
         if (menuVideoPlayer == null)
             return;
 
+        menuVideoPlayer.playOnAwake = false;
         menuVideoPlayer.isLooping = true;
 
         if (videoAudioSource != null)
@@ -73,14 +74,19 @@ public class MainMenuManager : MonoBehaviour
 
         menuVideoPlayer.prepareCompleted -= OnVideoPrepared;
         menuVideoPlayer.prepareCompleted += OnVideoPrepared;
-        menuVideoPlayer.Prepare();
+
+        // Se il video è già pronto (ritorno dal gioco, scena "calda"),
+        // l'evento potrebbe essere già scattato: assegna subito la texture.
+        if (menuVideoPlayer.isPrepared)
+            OnVideoPrepared(menuVideoPlayer);
+        else
+            menuVideoPlayer.Prepare();
     }
 
     private void OnVideoPrepared(VideoPlayer vp)
     {
-        if (videoImage != null)
-            videoImage.texture = vp.texture;
-
+        // In modalità Render Texture la RawImage mostra già la Render Texture:
+        // NON assegniamo vp.texture (sarebbe null e coprirebbe di bianco).
         vp.Play();
 
         if (videoAudioSource != null)
