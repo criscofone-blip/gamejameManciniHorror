@@ -34,6 +34,11 @@ public class MainMenuManager : MonoBehaviour
     [Tooltip("Secondi prima che compaiano i tasti del menù principale.")]
     [SerializeField] private float buttonsDelay = 5f;
 
+    [Header("Credits Video")]
+    [SerializeField] private VideoPlayer creditsVideoPlayer;
+    [SerializeField] private RawImage creditsVideoImage;
+    [SerializeField] private AudioSource creditsAudioSource;
+
     private bool buttonsRevealed;
 
     private void Start()
@@ -98,6 +103,12 @@ public class MainMenuManager : MonoBehaviour
     {
         if (menuVideoPlayer != null)
             menuVideoPlayer.prepareCompleted -= OnVideoPrepared;
+
+        if (creditsVideoPlayer != null)
+        {
+            creditsVideoPlayer.prepareCompleted -= OnCreditsPrepared;
+            creditsVideoPlayer.loopPointReached -= OnCreditsFinished;
+        }
     }
 
     private void CreateSaveSlots()
@@ -160,6 +171,55 @@ public class MainMenuManager : MonoBehaviour
     public void OpenCredits()
     {
         OpenPanel(creditsPanel);
+        PlayCreditsVideo();
+    }
+
+    private void PlayCreditsVideo()
+    {
+        if (creditsVideoPlayer == null)
+            return;
+
+        creditsVideoPlayer.isLooping = false;
+
+        if (creditsAudioSource != null)
+        {
+            creditsVideoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            creditsVideoPlayer.SetTargetAudioSource(0, creditsAudioSource);
+        }
+
+        creditsVideoPlayer.prepareCompleted -= OnCreditsPrepared;
+        creditsVideoPlayer.prepareCompleted += OnCreditsPrepared;
+        creditsVideoPlayer.loopPointReached -= OnCreditsFinished;
+        creditsVideoPlayer.loopPointReached += OnCreditsFinished;
+
+        creditsVideoPlayer.Prepare();
+    }
+
+    private void OnCreditsPrepared(VideoPlayer vp)
+    {
+        if (creditsVideoImage != null)
+            creditsVideoImage.texture = vp.texture;
+
+        vp.Play();
+
+        if (creditsAudioSource != null)
+            creditsAudioSource.Play();
+    }
+
+    private void OnCreditsFinished(VideoPlayer vp)
+    {
+        // Fine dei crediti → torna al menù principale (StopCreditsVideo pulisce tutto).
+        BackToMain();
+    }
+
+    private void StopCreditsVideo()
+    {
+        if (creditsVideoPlayer == null)
+            return;
+
+        creditsVideoPlayer.prepareCompleted -= OnCreditsPrepared;
+        creditsVideoPlayer.loopPointReached -= OnCreditsFinished;
+        creditsVideoPlayer.Stop();
     }
 
     public void OpenControls()
@@ -174,6 +234,10 @@ public class MainMenuManager : MonoBehaviour
 
     private void OpenPanel(GameObject targetPanel)
     {
+        // Se stiamo lasciando i crediti, ferma il relativo video.
+        if (targetPanel != creditsPanel)
+            StopCreditsVideo();
+
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
         creditsPanel.SetActive(false);

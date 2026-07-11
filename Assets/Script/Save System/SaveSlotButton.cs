@@ -28,16 +28,31 @@ public class SaveSlotButton : MonoBehaviour
         if (hasSave)
         {
             int enemyCount = SaveManager.LoadEnemyCount(slotIndex);
-            slotText.text = $"Slot {slotIndex + 1} - Nemici: {enemyCount}";
+            slotText.text = $"Nemici: {NumberToWords(enemyCount)}";
         }
         else
         {
-            slotText.text = $"Slot {slotIndex + 1} - Vuoto";
+            slotText.text = "Slot Vuoto";
         }
 
         loadButton.gameObject.SetActive(hasSave);
         deleteButton.gameObject.SetActive(hasSave);
         newGameButton.gameObject.SetActive(!hasSave);
+    }
+
+    // Converte il numero di nemici in parole (il font usato non ha le cifre).
+    private string NumberToWords(int number)
+    {
+        string[] words =
+        {
+            "zero", "uno", "due", "tre", "quattro",
+            "cinque", "sei", "sette", "otto", "nove", "dieci"
+        };
+
+        if (number >= 0 && number < words.Length)
+            return words[number];
+
+        return number.ToString();
     }
 
     public void LoadSlot()
