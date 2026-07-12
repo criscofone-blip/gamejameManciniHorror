@@ -27687,6 +27687,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 890733452}
   m_SourcePrefab: {fileID: 100100000, guid: 4f14a8a699528924f837721f64be59c4, type: 3}
+--- !u!114 &357276452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2778623508532958002, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+  m_PrefabInstance: {fileID: 597177190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &357958236
 GameObject:
   m_ObjectHideFlags: 0
@@ -173018,6 +173029,10 @@ PrefabInstance:
       propertyPath: eyesCoveredPanel
       value: 
       objectReference: {fileID: 1069672776}
+    - target: {fileID: 4373786437888079609, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      propertyPath: cooldownFillImage
+      value: 
+      objectReference: {fileID: 357276452}
     - target: {fileID: 7722837164229416659, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.83
