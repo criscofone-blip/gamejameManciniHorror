@@ -2677,12 +2677,12 @@ RectTransform:
   - {fileID: 1657969791632544734}
   - {fileID: 196316089837695384}
   - {fileID: 7937441113004978982}
+  - {fileID: 6248943110534512639}
   - {fileID: 3301471888411956213}
   - {fileID: 6449712679470403982}
   - {fileID: 3813063104222264680}
   - {fileID: 3904330676646827158}
   - {fileID: 4218244011877010771}
-  - {fileID: 6248943110534512639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

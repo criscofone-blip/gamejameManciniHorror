@@ -7,7 +7,11 @@ public class BodyPartPickup : MonoBehaviour, IInteractable
 
     [Header("Prompt")]
     [SerializeField] private string pickupText = "Premi E per raccogliere";
-    [SerializeField] private string alreadyCollectedText = "Già raccolto";
+    [SerializeField] private string alreadyCollectedText = "Giï¿½ raccolto";
+
+    [Header("Audio")]
+    [Tooltip("Opzionale: se assegnata, sovrascrive la clip di default del PlayerPickupAudio.")]
+    [SerializeField] private AudioClip pickupSound;
 
     public string GetInteractionText(PlayerItemHolder itemHolder)
     {
@@ -28,6 +32,12 @@ public class BodyPartPickup : MonoBehaviour, IInteractable
         bool collected = BodyPartCollectionManager.Instance.TryCollectPart(bodyPartType);
 
         if (collected)
+        {
+            // Suona sull'AudioSource del player (sopravvive alla disattivazione del pezzo).
+            if (PlayerPickupAudio.Instance != null)
+                PlayerPickupAudio.Instance.PlayPickup(pickupSound);
+
             gameObject.SetActive(false);
+        }
     }
 }

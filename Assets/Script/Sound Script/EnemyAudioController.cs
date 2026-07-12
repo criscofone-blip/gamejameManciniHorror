@@ -121,8 +121,16 @@ public class EnemyAudioController : MonoBehaviour
     {
         AudioClip breathClip = GetBreathClip(state);
 
+        // Clip non assegnata per questo stato → silenzio (ferma il respiro precedente).
         if (breathClip == null)
+        {
+            if (breathingSource != null)
+            {
+                breathingSource.Stop();
+                breathingSource.clip = null;
+            }
             return;
+        }
 
         if (breathingSource.clip == breathClip && breathingSource.isPlaying)
             return;
@@ -147,7 +155,7 @@ public class EnemyAudioController : MonoBehaviour
                 return chaseFootsteps;
 
             default:
-                return wanderFootsteps;
+                return null;   // niente fallback su un altro stato
         }
     }
 
@@ -165,7 +173,7 @@ public class EnemyAudioController : MonoBehaviour
                 return chaseBreath;
 
             default:
-                return wanderBreath;
+                return null;   // niente fallback su un altro stato
         }
     }
 

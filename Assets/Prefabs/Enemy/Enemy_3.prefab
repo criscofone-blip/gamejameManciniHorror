@@ -333,7 +333,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a15d3214a39c5ba43a122a1d23cb430d, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -547,7 +547,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537758118342221820}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: 1479372276
   m_Radius: 0.59
   m_Speed: 3.5
   m_Acceleration: 8
@@ -588,7 +588,8 @@ MonoBehaviour:
   wanderSpeed: 4.01
   investigateSpeed: 6.93
   chaseSpeed: 8.93
-  stuckSpeedThreshold: 1
+  stuckCheckInterval: 0.4
+  minProgressDistance: 0.12
   stuckTimeToUnstuck: 1
   stuckSampleAttempts: 8
   killDistance: 1.24
@@ -610,15 +611,15 @@ MonoBehaviour:
   breathingSource: {fileID: 1484424061263753879}
   screamSource: {fileID: 4133347711198443245}
   wanderFootsteps:
-  - {fileID: 8300000, guid: 3a1af6616e9f5e54bb60ae62e8d71daa, type: 3}
+  - {fileID: 8300000, guid: c2d493430fa294141b881f45043e6973, type: 3}
   investigateFootsteps:
-  - {fileID: 8300000, guid: 1b01a0f52965f9c4ebe4caa5115c20d8, type: 3}
+  - {fileID: 8300000, guid: c2d493430fa294141b881f45043e6973, type: 3}
   chaseFootsteps:
-  - {fileID: 8300000, guid: 4a5f66a68e171d44d85f3c2a1fea34b8, type: 3}
-  wanderBreath: {fileID: 8300000, guid: 256bc3038cbe9724bbfb47564a1600e7, type: 3}
-  investigateBreath: {fileID: 8300000, guid: 61e6f475d1a35954d9c21fea94362a29, type: 3}
-  chaseBreath: {fileID: 8300000, guid: 168ee062283f7294b88e088d1f86f085, type: 3}
-  chaseScream: {fileID: 8300000, guid: 02ddd93f497ef264f87ee03c15a13cfa, type: 3}
+  - {fileID: 8300000, guid: c2d493430fa294141b881f45043e6973, type: 3}
+  wanderBreath: {fileID: 0}
+  investigateBreath: {fileID: 8300000, guid: a15d3214a39c5ba43a122a1d23cb430d, type: 3}
+  chaseBreath: {fileID: 8300000, guid: a15d3214a39c5ba43a122a1d23cb430d, type: 3}
+  chaseScream: {fileID: 8300000, guid: 3ab010ec8230bea419c2f73f1d458c66, type: 3}
   wanderStepInterval: 0.3
   investigateStepInterval: 0.15
   chaseStepInterval: 0.02
