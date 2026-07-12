@@ -35,6 +35,12 @@ public class EnemyVisionChase : MonoBehaviour
     [SerializeField] private float investigateSpeed = 2.5f;
     [SerializeField] private float chaseSpeed = 4f;
 
+    [Header("Chase Repath (ottimizzazione)")]
+    [Tooltip("Intervallo minimo (s) tra un ricalcolo del percorso e l'altro in inseguimento.")]
+    [SerializeField] private float chaseRepathInterval = 0.15f;
+    [Tooltip("Se il player si sposta più di questa distanza (m) si ricalcola subito.")]
+    [SerializeField] private float chaseRepathMoveThreshold = 0.75f;
+
     [Header("Anti-Stuck")]
     [Tooltip("Ogni quanti secondi controllare i progressi di movimento.")]
     [SerializeField] private float stuckCheckInterval = 0.4f;
@@ -50,9 +56,6 @@ public class EnemyVisionChase : MonoBehaviour
     [Tooltip("Indice del mostro (0/1/2): sceglie il pannello di game over.")]
     [SerializeField] private int monsterIndex = 0;
 
-    [Header("Debug")]
-    [SerializeField] private bool showDebugLogs = false;
-
     private NavMeshAgent agent;
     private EnemyState currentState;
     private float wanderTimer;
@@ -60,6 +63,11 @@ public class EnemyVisionChase : MonoBehaviour
     private Vector3 lastSeenPlayerPosition;
     private bool wasFrozen;
     private NavMeshPath cachedPath;
+    private int obstaclesLayer;
+
+    // Chase: throttle del ricalcolo percorso.
+    private float chaseRepathTimer;
+    private Vector3 lastChaseTarget;
 
     // Anti-stuck (basato sullo spostamento reale nel tempo).
     private Vector3 lastCheckPosition;
@@ -72,6 +80,7 @@ public class EnemyVisionChase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         cachedPath = new NavMeshPath();
+        obstaclesLayer = LayerMask.NameToLayer("Obstacles");
 
         if (player == null)
         {
@@ -94,12 +103,6 @@ public class EnemyVisionChase : MonoBehaviour
         lastCheckTime = Time.time;
 
         SetNewWanderPoint();
-
-        if (showDebugLogs)
-        {
-            Debug.Log($"[Enemy] Player trovato: {player != null}");
-            Debug.Log($"[Enemy] Agent on NavMesh: {agent.isOnNavMesh}");
-        }
     }
 
     private void Update()
@@ -162,9 +165,6 @@ public class EnemyVisionChase : MonoBehaviour
 
         wasFrozen = true;
         agent.isStopped = true;
-
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Frozen");
     }
 
     private void UnfreezeEnemy()
@@ -186,9 +186,6 @@ public class EnemyVisionChase : MonoBehaviour
                 agent.SetDestination(lastSeenPlayerPosition);
                 break;
         }
-
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Unfrozen");
     }
 
     private void StartChase()
@@ -196,16 +193,9 @@ public class EnemyVisionChase : MonoBehaviour
         currentState = EnemyState.Chase;
         agent.speed = chaseSpeed;
         lastSeenPlayerPosition = player.position;
-        if (NavMesh.SamplePosition(player.position, out NavMeshHit hit, 3f, NavMesh.AllAreas))
-        {
-            agent.SetDestination(hit.position);
-        }
-        else
-        {
-            StartInvestigate();
-        }
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Stato -> CHASE");
+
+        chaseRepathTimer = 0f;
+        RepathToPlayer();   // primo ricalcolo immediato
     }
 
     private void UpdateChase()
@@ -213,14 +203,29 @@ public class EnemyVisionChase : MonoBehaviour
         agent.speed = chaseSpeed;
         lastSeenPlayerPosition = player.position;
 
+        // Ricalcola il percorso solo a intervalli o se il player si è spostato molto:
+        // evita un pathfind ogni frame per ogni nemico.
+        chaseRepathTimer -= Time.deltaTime;
+
+        bool playerMovedFar =
+            (player.position - lastChaseTarget).sqrMagnitude >
+            chaseRepathMoveThreshold * chaseRepathMoveThreshold;
+
+        if (chaseRepathTimer <= 0f || playerMovedFar)
+        {
+            chaseRepathTimer = chaseRepathInterval;
+            RepathToPlayer();
+        }
+    }
+
+    private void RepathToPlayer()
+    {
+        lastChaseTarget = player.position;
+
         if (NavMesh.SamplePosition(player.position, out NavMeshHit hit, 3f, NavMesh.AllAreas))
-        {
             agent.SetDestination(hit.position);
-        }
         else
-        {
             StartInvestigate();
-        }
     }
 
     private void StartInvestigate()
@@ -229,9 +234,6 @@ public class EnemyVisionChase : MonoBehaviour
         agent.speed = investigateSpeed;
         investigateTimer = investigateDuration;
         agent.SetDestination(lastSeenPlayerPosition);
-
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Stato -> INVESTIGATE");
     }
 
     private void UpdateInvestigate()
@@ -254,9 +256,6 @@ public class EnemyVisionChase : MonoBehaviour
         agent.speed = wanderSpeed;
         wanderTimer = 0f;
         SetNewWanderPoint();
-
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Stato -> WANDER");
     }
 
     private void UpdateWander()
@@ -314,16 +313,12 @@ public class EnemyVisionChase : MonoBehaviour
         {
             if(hit.collider != null) //agginta sezione if
             {
-                string LayerName = LayerMask.LayerToName(hit.collider.gameObject.layer);
-
-                if(LayerName == "Obstacles")
-                {
-
+                // Confronto per indice di layer (niente stringhe/allocazioni ogni frame).
+                if (hit.collider.gameObject.layer == obstaclesLayer)
                     return false;
-                }
 
                 if (hit.transform == player || hit.transform.IsChildOf(player))
-                {                    
+                {
                     return true;
                 }
                    
@@ -421,9 +416,6 @@ public class EnemyVisionChase : MonoBehaviour
 
     private void ResolveStuck()
     {
-        if (showDebugLogs)
-            Debug.Log("[Enemy] Bloccato → cerco una via di fuga");
-
         switch (currentState)
         {
             case EnemyState.Chase:
@@ -447,12 +439,7 @@ public class EnemyVisionChase : MonoBehaviour
     {
         // Cerca il punto navmesh più vicino e riporta l'agent lì.
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 5f, NavMesh.AllAreas))
-        {
             agent.Warp(hit.position);
-
-            if (showDebugLogs)
-                Debug.Log("[Enemy] Recuperato sulla NavMesh");
-        }
     }
 
     private void GoWanderEscape()
@@ -485,6 +472,11 @@ public class EnemyVisionChase : MonoBehaviour
         Vector3 best = transform.position;
         bool found = false;
 
+        // "Abbastanza lontano": appena troviamo un punto oltre questa distanza smettiamo
+        // di campionare (meno CalculatePath = meno costo nel frame di sblocco).
+        float goodEnough = wanderRadius * 0.6f;
+        float goodEnoughSq = goodEnough * goodEnough;
+
         for (int i = 0; i < stuckSampleAttempts; i++)
         {
             Vector3 randomDir = Random.insideUnitSphere * wanderRadius;
@@ -512,6 +504,10 @@ public class EnemyVisionChase : MonoBehaviour
                 best = hit.position;
                 found = true;
             }
+
+            // Già trovato un punto abbastanza lontano → basta così.
+            if (found && bestDistance >= goodEnoughSq)
+                break;
         }
 
         result = best;

@@ -18,16 +18,10 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemies()
     {
         if (enemyPrefabs == null || enemyPrefabs.Length == 0)
-        {
-            Debug.LogError("[EnemySpawner] Nessun enemy prefab assegnato.");
             return;
-        }
 
         if (spawnPoints == null || spawnPoints.Length == 0)
-        {
-            Debug.LogError("[EnemySpawner] Nessuno spawn point assegnato.");
             return;
-        }
 
         int count = 1;
 
@@ -43,10 +37,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject prefab = enemyPrefabs[i];
 
             if (prefab == null)
-            {
-                Debug.LogWarning($"[EnemySpawner] enemyPrefabs[{i}] non assegnato, salto.");
                 continue;
-            }
 
             // Spawn point totalmente casuale (due nemici possono capitare nello stesso punto).
             Transform spawn = spawnPoints[Random.Range(0, spawnPoints.Length)];

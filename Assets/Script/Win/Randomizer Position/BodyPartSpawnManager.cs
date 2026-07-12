@@ -65,11 +65,6 @@ public class BodyPartSpawnManager : MonoBehaviour
             usedRooms.Add(point.roomType);
             spawned++;
         }
-
-        if (spawned < bodyParts.Count)
-        {
-            Debug.LogWarning("Non ci sono abbastanza stanze diverse per spawnare tutti i pezzi!");
-        }
     }
 
     private void ShuffleList<T>(List<T> list)
