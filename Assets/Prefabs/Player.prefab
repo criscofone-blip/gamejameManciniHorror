@@ -283,10 +283,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEyesCover
   coverEyesAction: {fileID: -1870470682849049232, guid: 5267bd99dac074a42bf763c2ec6103d6, type: 3}
+  normalSnapshot: {fileID: 24500006, guid: de5adbb3072dabe41aa7910eaab2381b, type: 2}
+  effectSnapshot: {fileID: 3320046076113424281, guid: de5adbb3072dabe41aa7910eaab2381b, type: 2}
   topEyelid: {fileID: 0}
   bottomEyelid: {fileID: 0}
   closeDuration: 0.2
   openDuration: 0.18
+  cooldownDuration: 10
+  cooldownFillImage: {fileID: 0}
+  readyColor: {r: 1, g: 1, b: 1, a: 1}
+  notReadyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7879340743677832332
 MonoBehaviour:
   m_ObjectHideFlags: 0

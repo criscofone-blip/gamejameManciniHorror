@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -9,7 +10,8 @@ public class PlayerEyesCover : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private InputActionReference coverEyesAction;
-
+    [SerializeField] private AudioMixerSnapshot normalSnapshot;
+    [SerializeField] private AudioMixerSnapshot effectSnapshot;
     [Header("Eyelids (UI)")]
     [Tooltip("Palpebra superiore: pivot Y = 1, ancorata alla metà alta dello schermo.")]
     [SerializeField] private RectTransform topEyelid;
@@ -141,6 +143,11 @@ public class PlayerEyesCover : MonoBehaviour
         // Visivo: animazione palpebre.
         if (animRoutine != null)
             StopCoroutine(animRoutine);
+
+        if (covered)
+            effectSnapshot.TransitionTo(0.2f);
+        else
+            normalSnapshot.TransitionTo(0.2f);
 
         animRoutine = StartCoroutine(AnimateEyelids(covered));
     }
