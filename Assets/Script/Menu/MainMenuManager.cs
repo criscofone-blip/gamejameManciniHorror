@@ -28,6 +28,10 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private RawImage videoImage;
     [SerializeField] private AudioSource videoAudioSource;
 
+    [Header("Menu Music")]
+    [Tooltip("Musica del menù: si ferma sui Credits e riparte al ritorno al menù principale.")]
+    [SerializeField] private AudioSource menuAudioSource;
+
     [Header("Buttons Intro")]
     [Tooltip("Gruppo dei bottoni del menù principale che appare dopo il ritardo.")]
     [SerializeField] private GameObject mainButtonsContainer;
@@ -240,6 +244,12 @@ public class MainMenuManager : MonoBehaviour
         if (targetPanel != creditsPanel)
             StopCreditsVideo();
 
+        // Musica del menù: stop sui crediti, riavvio al ritorno al menù principale.
+        if (targetPanel == creditsPanel)
+            StopMenuMusic();
+        else if (targetPanel == mainPanel)
+            PlayMenuMusicIfStopped();
+
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
         creditsPanel.SetActive(false);
@@ -247,6 +257,18 @@ public class MainMenuManager : MonoBehaviour
         loadPanel.SetActive(false);
 
         targetPanel.SetActive(true);
+    }
+
+    private void StopMenuMusic()
+    {
+        if (menuAudioSource != null && menuAudioSource.isPlaying)
+            menuAudioSource.Stop();
+    }
+
+    private void PlayMenuMusicIfStopped()
+    {
+        if (menuAudioSource != null && !menuAudioSource.isPlaying)
+            menuAudioSource.Play();
     }
 
     public void QuitGame()
