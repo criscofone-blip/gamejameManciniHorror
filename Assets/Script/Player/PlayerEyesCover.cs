@@ -41,6 +41,15 @@ public class PlayerEyesCover : MonoBehaviour
 
     private void Update()
     {
+        // A partita persa non si possono chiudere gli occhi: forzali aperti.
+        if (GameOverManager.IsGameOver)
+        {
+            if (EyesCovered)
+                SetEyesCovered(false);
+
+            return;
+        }
+
         if (coverEyesAction.action.WasPressedThisFrame())
             SetEyesCovered(true);
 

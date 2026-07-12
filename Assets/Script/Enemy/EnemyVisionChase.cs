@@ -36,9 +36,11 @@ public class EnemyVisionChase : MonoBehaviour
     [SerializeField] private float chaseSpeed = 4f;
 
     [Header("Anti-Stuck")]
-    [Tooltip("Sotto questa velocità (m/s) l'agent è considerato potenzialmente bloccato.")]
-    [SerializeField] private float stuckSpeedThreshold = 0.1f;
-    [Tooltip("Secondi di quasi-immobilità (mentre dovrebbe muoversi) prima di forzare una via di fuga.")]
+    [Tooltip("Ogni quanti secondi controllare i progressi di movimento.")]
+    [SerializeField] private float stuckCheckInterval = 0.4f;
+    [Tooltip("Se in un intervallo si sposta meno di questa distanza (m), l'intervallo è considerato bloccato.")]
+    [SerializeField] private float minProgressDistance = 0.12f;
+    [Tooltip("Secondi totali di mancato progresso prima di forzare una via di fuga.")]
     [SerializeField] private float stuckTimeToUnstuck = 1f;
     [Tooltip("Quanti punti campionare per trovare una via di fuga raggiungibile.")]
     [SerializeField] private int stuckSampleAttempts = 8;
@@ -57,8 +59,13 @@ public class EnemyVisionChase : MonoBehaviour
     private float investigateTimer;
     private Vector3 lastSeenPlayerPosition;
     private bool wasFrozen;
-    private float stuckTimer;
     private NavMeshPath cachedPath;
+
+    // Anti-stuck (basato sullo spostamento reale nel tempo).
+    private Vector3 lastCheckPosition;
+    private float lastCheckTime;
+    private float stuckAccumulated;
+
     public EnemyState CurrentState => currentState;
 
     private void Awake()
@@ -82,6 +89,10 @@ public class EnemyVisionChase : MonoBehaviour
     {
         currentState = EnemyState.Wander;
         agent.speed = wanderSpeed;
+
+        lastCheckPosition = transform.position;
+        lastCheckTime = Time.time;
+
         SetNewWanderPoint();
 
         if (showDebugLogs)
@@ -93,8 +104,15 @@ public class EnemyVisionChase : MonoBehaviour
 
     private void Update()
     {
-        if (player == null || !agent.isOnNavMesh)
+        if (player == null)
             return;
+
+        // Se è finito fuori dalla NavMesh, riportalo sul punto valido più vicino.
+        if (!agent.isOnNavMesh)
+        {
+            TryRecoverToNavMesh();
+            return;
+        }
 
         if (PlayerEyesCover.EyesCovered)
         {
@@ -320,8 +338,8 @@ public class EnemyVisionChase : MonoBehaviour
 
     private void SetNewWanderPoint()
     {
-        // Preferisci un punto con percorso COMPLETO: evita di puntare verso posti irraggiungibili.
-        if (TryFindReachablePoint(out Vector3 reachablePoint))
+        // Wander normale: un punto CASUALE raggiungibile (percorso completo).
+        if (TryFindReachablePoint(out Vector3 reachablePoint, false))
         {
             agent.SetDestination(reachablePoint);
             return;
@@ -336,46 +354,69 @@ public class EnemyVisionChase : MonoBehaviour
             agent.SetDestination(hit.position);
     }
 
-    // ---------- Anti-Stuck ----------
+    // ---------- Anti-Stuck (basato sullo spostamento reale) ----------
 
     private void DetectAndResolveStuck()
     {
-        // Niente da controllare se è fermo di proposito o senza percorso.
-        if (agent.isStopped || agent.pathPending || !agent.hasPath)
+        // Fermo di proposito.
+        if (agent.isStopped)
         {
-            stuckTimer = 0f;
-            return;
-        }
-
-        // È praticamente arrivato: non è bloccato.
-        if (agent.remainingDistance <= agent.stoppingDistance + 0.1f)
-        {
-            stuckTimer = 0f;
+            ResetStuckTracking();
             return;
         }
 
         // In Investigate la pausa di rotazione è un fermo voluto.
-        if (currentState == EnemyState.Investigate && agent.remainingDistance <= investigateStopDistance)
+        if (currentState == EnemyState.Investigate &&
+            !agent.pathPending &&
+            agent.remainingDistance <= investigateStopDistance)
         {
-            stuckTimer = 0f;
+            ResetStuckTracking();
             return;
         }
 
-        // Dovrebbe muoversi ma è quasi fermo → accumula tempo di blocco.
-        if (agent.velocity.sqrMagnitude < stuckSpeedThreshold * stuckSpeedThreshold)
-        {
-            stuckTimer += Time.deltaTime;
+        // Controlla i progressi solo a intervalli.
+        if (Time.time - lastCheckTime < stuckCheckInterval)
+            return;
 
-            if (stuckTimer >= stuckTimeToUnstuck)
-            {
-                stuckTimer = 0f;
-                ResolveStuck();
-            }
+        float moved = Vector3.Distance(transform.position, lastCheckPosition);
+        float elapsed = Time.time - lastCheckTime;
+
+        lastCheckPosition = transform.position;
+        lastCheckTime = Time.time;
+
+        // Se non ha una meta, dagliene una invece di considerarlo bloccato.
+        if (!agent.hasPath && !agent.pathPending)
+        {
+            if (currentState == EnemyState.Wander)
+                SetNewWanderPoint();
+
+            stuckAccumulated = 0f;
+            return;
+        }
+
+        if (moved >= minProgressDistance)
+        {
+            // Progredisce: tutto ok.
+            stuckAccumulated = 0f;
         }
         else
         {
-            stuckTimer = 0f;
+            // Nessun progresso reale in questo intervallo.
+            stuckAccumulated += elapsed;
+
+            if (stuckAccumulated >= stuckTimeToUnstuck)
+            {
+                stuckAccumulated = 0f;
+                ResolveStuck();
+            }
         }
+    }
+
+    private void ResetStuckTracking()
+    {
+        stuckAccumulated = 0f;
+        lastCheckPosition = transform.position;
+        lastCheckTime = Time.time;
     }
 
     private void ResolveStuck()
@@ -402,6 +443,18 @@ public class EnemyVisionChase : MonoBehaviour
         }
     }
 
+    private void TryRecoverToNavMesh()
+    {
+        // Cerca il punto navmesh più vicino e riporta l'agent lì.
+        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 5f, NavMesh.AllAreas))
+        {
+            agent.Warp(hit.position);
+
+            if (showDebugLogs)
+                Debug.Log("[Enemy] Recuperato sulla NavMesh");
+        }
+    }
+
     private void GoWanderEscape()
     {
         currentState = EnemyState.Wander;
@@ -414,7 +467,8 @@ public class EnemyVisionChase : MonoBehaviour
 
     private bool SetEscapePoint()
     {
-        if (TryFindReachablePoint(out Vector3 point))
+        // Via di fuga: il punto raggiungibile più LONTANO, per uscire davvero dal punto stretto.
+        if (TryFindReachablePoint(out Vector3 point, true))
         {
             agent.SetDestination(point);
             return true;
@@ -423,8 +477,9 @@ public class EnemyVisionChase : MonoBehaviour
         return false;
     }
 
-    // Campiona più punti e sceglie il raggiungibile (percorso completo) più lontano.
-    private bool TryFindReachablePoint(out Vector3 result)
+    // Campiona più punti raggiungibili (percorso completo).
+    // preferFarthest = true → sceglie il più lontano (fuga); false → il primo trovato (wander naturale).
+    private bool TryFindReachablePoint(out Vector3 result, bool preferFarthest)
     {
         float bestDistance = -1f;
         Vector3 best = transform.position;
@@ -441,6 +496,13 @@ public class EnemyVisionChase : MonoBehaviour
 
             if (!agent.CalculatePath(hit.position, cachedPath) || cachedPath.status != NavMeshPathStatus.PathComplete)
                 continue;
+
+            if (!preferFarthest)
+            {
+                // Primo punto raggiungibile va bene (wander vario e naturale).
+                result = hit.position;
+                return true;
+            }
 
             float d = (hit.position - transform.position).sqrMagnitude;
 

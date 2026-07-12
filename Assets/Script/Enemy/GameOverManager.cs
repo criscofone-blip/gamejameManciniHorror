@@ -9,11 +9,15 @@ public class GameOverManager : MonoBehaviour
     [Header("Scenes")]
     [SerializeField] private string menuSceneName = "MainMenu";
 
-    private bool isGameOver;
+    // Stato globale letto da altri script (menù, occhi) per bloccare le azioni a partita persa.
+    public static bool IsGameOver { get; private set; }
 
     private void Start()
     {
         Time.timeScale = 1f;
+
+        IsGameOver = false;
+        AudioListener.pause = false;
 
         if (panels != null)
         {
@@ -27,14 +31,17 @@ public class GameOverManager : MonoBehaviour
 
     public void TriggerGameOver(int monsterIndex)
     {
-        if (isGameOver)
+        if (IsGameOver)
             return;
 
-        isGameOver = true;
+        IsGameOver = true;
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // Silenzia l'audio della scena (il video di game over può ignorare la pausa).
+        AudioListener.pause = true;
 
         if (panels != null && panels.Length > 0)
         {
@@ -49,6 +56,8 @@ public class GameOverManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        IsGameOver = false;
+        AudioListener.pause = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -56,6 +65,8 @@ public class GameOverManager : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        IsGameOver = false;
+        AudioListener.pause = false;
         SceneManager.LoadScene(menuSceneName);
     }
 }

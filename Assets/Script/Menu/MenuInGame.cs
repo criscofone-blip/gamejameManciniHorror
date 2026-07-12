@@ -33,6 +33,10 @@ public class MenuInGame : MonoBehaviour
 
     private void Update()
     {
+        // A partita persa il menù non si può aprire.
+        if (GameOverManager.IsGameOver)
+            return;
+
         if (openMenuAction.action.WasPressedThisFrame())
         {
             if (OpenedMenu)

@@ -556,6 +556,9 @@ MonoBehaviour:
   wanderSpeed: 4.01
   investigateSpeed: 6.93
   chaseSpeed: 8.93
+  stuckSpeedThreshold: 1
+  stuckTimeToUnstuck: 1
+  stuckSampleAttempts: 8
   killDistance: 1.24
   monsterIndex: 1
   showDebugLogs: 1

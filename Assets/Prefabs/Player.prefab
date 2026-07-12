@@ -341,7 +341,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1ca6728c5e61b3e4b941ef8bd674c465, type: 3}
   impactLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 513
   minImpactSpeed: 0.15
   volume: 2.68
   pitchRandomness: 0.08

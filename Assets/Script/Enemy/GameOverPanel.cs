@@ -52,6 +52,9 @@ public class GameOverPanel : MonoBehaviour
         {
             videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
             videoPlayer.SetTargetAudioSource(0, audioSource);
+
+            // L'audio del video deve sentirsi anche con AudioListener.pause attivo.
+            audioSource.ignoreListenerPause = true;
         }
 
         videoPlayer.prepareCompleted -= OnVideoPrepared;
