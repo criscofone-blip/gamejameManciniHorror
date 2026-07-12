@@ -585,9 +585,9 @@ MonoBehaviour:
   wanderInterval: 17.75
   investigateDuration: 5.2
   investigateStopDistance: 6.4
-  wanderSpeed: 4.01
-  investigateSpeed: 6.93
-  chaseSpeed: 8.93
+  wanderSpeed: 3
+  investigateSpeed: 6.5
+  chaseSpeed: 8
   stuckCheckInterval: 0.4
   minProgressDistance: 0.12
   stuckTimeToUnstuck: 1

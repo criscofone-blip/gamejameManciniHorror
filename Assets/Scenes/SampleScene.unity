@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -704,6 +708,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1864,6 +1872,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (144)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3112,6 +3124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3313,6 +3329,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3868,6 +3888,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5689,12 +5713,16 @@ PrefabInstance:
       value: BigWall (096)
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 104.930244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.0181
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 3.807
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7186,6 +7214,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9345,6 +9377,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11638,6 +11674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13849,6 +13889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14291,6 +14335,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15997,6 +16045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16749,6 +16801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (138)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16888,6 +16944,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (148)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17148,6 +17208,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17671,6 +17735,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (137)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19277,7 +19345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014919803199995206, guid: 31c5a0d9de845474e81a956731a24e08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -0.025
       objectReference: {fileID: 0}
     - target: {fileID: 5014919803199995206, guid: 31c5a0d9de845474e81a956731a24e08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20230,6 +20298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21008,6 +21080,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24571,6 +24647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25023,6 +25103,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26078,6 +26162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26769,6 +26857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27038,6 +27130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (123)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27111,6 +27207,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29435,6 +29535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30394,7 +30498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30809,6 +30913,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31534,6 +31642,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32693,6 +32805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32761,6 +32877,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34782,7 +34902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80526996
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36796,6 +36916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37533,6 +37657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37663,6 +37791,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38421,6 +38553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38494,6 +38630,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38630,6 +38770,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39515,6 +39659,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40867,6 +41015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41106,6 +41258,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (135)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44011,6 +44167,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48678,7 +48838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49215,6 +49375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49288,6 +49452,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51734,6 +51902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53043,6 +53215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53133,7 +53309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80526996
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53942,6 +54118,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (139)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55517,6 +55697,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58652,6 +58836,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62408,6 +62596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (143)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64003,6 +64195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (141)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64142,6 +64338,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64916,6 +65116,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67723,6 +67927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (145)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67867,6 +68075,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68867,6 +69079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (136)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -69238,6 +69454,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (146)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70547,6 +70767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70733,6 +70957,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -72283,6 +72511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72480,6 +72712,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74106,6 +74342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74700,7 +74940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -76649,6 +76889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -77237,6 +77481,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78508,6 +78756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (113)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -78843,6 +79095,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -79861,6 +80117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -80817,6 +81077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -81328,6 +81592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -81602,6 +81870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -81737,6 +82009,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82854,6 +83130,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85282,6 +85562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85437,6 +85721,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85758,7 +86046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -85795,6 +86083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85931,6 +86223,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -86603,7 +86899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -89083,6 +89379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89763,6 +90063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89915,7 +90219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80526996
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90475,7 +90779,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8191
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -90571,7 +90875,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1169490881}
-  - component: {fileID: 1169490882}
   m_Layer: 0
   m_Name: FloorClosest
   m_TagString: Untagged
@@ -90610,38 +90913,6 @@ Transform:
   - {fileID: 1390908634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1169490882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169490880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 1
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.016666668
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 0770d02c9d4d4e74f8402b66a079aa6f, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1169903786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91367,6 +91638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -91915,7 +92190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -92208,6 +92483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -92796,6 +93075,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -94110,7 +94393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94217,6 +94500,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -95151,6 +95438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95713,6 +96004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -96133,6 +96428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -96392,6 +96691,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -96783,6 +97086,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -98702,6 +99009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (131)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -98926,6 +99237,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -99248,6 +99563,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101663,7 +101982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -102823,7 +103142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014919803199995206, guid: 31c5a0d9de845474e81a956731a24e08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -0.025000006
       objectReference: {fileID: 0}
     - target: {fileID: 5014919803199995206, guid: 31c5a0d9de845474e81a956731a24e08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103243,6 +103562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -103843,7 +104166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80526996
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -104615,6 +104938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -105187,7 +105514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106564,11 +106891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.101
+      value: -0.101011276
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.23
+      value: -4.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106576,35 +106903,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.009241208
+      value: -0.013727369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.012425065
+      value: -0.007908855
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7093436
+      value: 0.70940834
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.70469284
+      value: -0.7046197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 89.545
+      value: 89.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 146.483
+      value: 231.422
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -35.273
+      value: 49.669
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -106679,6 +107014,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -107679,6 +108018,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -108711,6 +109054,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110787,6 +111134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -111064,6 +111415,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -112099,7 +112454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -112206,6 +112561,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -115365,6 +115724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (106)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -116041,7 +116404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.98822606
+      value: 1.0387691
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalScale.y
@@ -116057,7 +116420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8801103
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -116094,6 +116457,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -116287,6 +116654,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -116656,6 +117027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -116746,7 +117121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -118081,6 +118456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -118679,6 +119058,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (114)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -119884,6 +120267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120276,6 +120663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120473,6 +120864,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (129)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120803,6 +121198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (149)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120929,6 +121328,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (107)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -121221,6 +121624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121439,6 +121846,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -121829,6 +122240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121902,6 +122317,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -122813,6 +123232,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -124862,6 +125285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -125319,6 +125746,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (142)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -127032,6 +127463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -127186,7 +127621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90dce847243fab64a80bf9476ca8864b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.016
+      value: -0.07199998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90dce847243fab64a80bf9476ca8864b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -127301,6 +127736,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -129479,6 +129918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -130548,6 +130991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -131501,6 +131948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -132302,6 +132753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (147)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -132662,6 +133117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -132685,7 +133144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -132792,6 +133251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -132918,6 +133381,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -133536,6 +134003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -133895,6 +134366,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (104)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -135545,7 +136020,7 @@ Transform:
   m_GameObject: {fileID: 1739836727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.41, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -136684,7 +137159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -136916,6 +137391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (140)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -136989,6 +137468,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (115)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -138032,6 +138515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -138406,6 +138893,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (133)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -139571,6 +140062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (126)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -140665,6 +141160,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -142194,6 +142693,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -145554,6 +146057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (122)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -145627,6 +146134,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -146163,6 +146674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -147478,6 +147993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148216,6 +148735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148475,6 +148998,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -149534,6 +150061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -149827,6 +150358,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -155133,6 +155668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -155916,7 +156455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -156924,6 +157463,10 @@ PrefabInstance:
       value: BigWall (097)
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 104.930244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalScale.z
       value: 49.253
       objectReference: {fileID: 0}
@@ -156933,7 +157476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 3.807
       objectReference: {fileID: 0}
     - target: {fileID: 4517447789353645134, guid: 523ab11fc2c9900449175df895df786f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -158501,7 +159044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8052699
+      value: -1.1199999
       objectReference: {fileID: 0}
     - target: {fileID: 6788208791018730971, guid: c9aca2b0f17c5724e86b7954d8cdea6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -158882,6 +159425,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -161172,6 +161719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -161459,6 +162010,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -161792,6 +162347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -162034,6 +162593,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (134)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -165386,6 +165949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -166070,6 +166637,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -168082,6 +168653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ind_Sup_Beam_Wood_Old_04 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dff1951c5a11aea4abac08414e129a97, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -169265,7 +169840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1169430212523930249, guid: b4bf25a3f2606714bb28ac5ad23af336, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0069784075
+      value: -0.19199999
       objectReference: {fileID: 0}
     - target: {fileID: 1169430212523930249, guid: b4bf25a3f2606714bb28ac5ad23af336, type: 3}
       propertyPath: m_LocalPosition.z
@@ -169334,7 +169909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697533258976913203, guid: 1eeb17562a2f5c74d979a8f5a068111d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.027050003
+      value: -0.051999986
       objectReference: {fileID: 0}
     - target: {fileID: 1697533258976913203, guid: 1eeb17562a2f5c74d979a8f5a068111d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -169761,7 +170336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7166357818304151124, guid: 3cbda269a55167d479481c891d20c0ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.052950002
+      value: -0.121999994
       objectReference: {fileID: 0}
     - target: {fileID: 7166357818304151124, guid: 3cbda269a55167d479481c891d20c0ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -169832,6 +170407,10 @@ PrefabInstance:
       propertyPath: bottomEyelid
       value: 
       objectReference: {fileID: 1512025012}
+    - target: {fileID: 4373786437888079609, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
+      propertyPath: cooldownDuration
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4373786437888079609, guid: 9319bbad6099c5841a9e27468e058efe, type: 3}
       propertyPath: eyesCoveredPanel
       value: 
@@ -170157,7 +170736,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 561940077705481548, guid: 27bc38b544f5a4b47b4a30fc5049ad5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.208
+      value: 0.076
       objectReference: {fileID: 0}
     - target: {fileID: 1425124980332450464, guid: 27bc38b544f5a4b47b4a30fc5049ad5e, type: 3}
       propertyPath: m_Name
@@ -170169,7 +170748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1769034163516606490, guid: 27bc38b544f5a4b47b4a30fc5049ad5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.135
+      value: 0.053
       objectReference: {fileID: 0}
     - target: {fileID: 1769034163516606490, guid: 27bc38b544f5a4b47b4a30fc5049ad5e, type: 3}
       propertyPath: m_LocalPosition.z
