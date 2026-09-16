@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Carica
+  m_text: LOAD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cancella
+  m_text: DELETE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nuova Partita
+  m_text: NEW GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}

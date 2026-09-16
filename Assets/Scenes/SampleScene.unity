@@ -16192,6 +16192,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6449800806274780088, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
   m_PrefabInstance: {fileID: 201817263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &201817266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8698020003152710750, guid: 53ca9f55f048ce84aaf30c78dea50dda, type: 3}
+  m_PrefabInstance: {fileID: 201817263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068569144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e090f84d7b5f24d4f90d649f4d3e9318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VictoryManager
 --- !u!1 &202208421
 GameObject:
   m_ObjectHideFlags: 0
@@ -19013,7 +19024,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: comandi
+  m_text: CONTROLS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -42971,7 +42982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CONTINUA
+  m_text: RESUME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -48160,6 +48171,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 293009676839354269, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: RESTART
+      objectReference: {fileID: 0}
     - target: {fileID: 781790426636741986, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_AudioOutputMode
       value: 1
@@ -48176,6 +48191,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1781883390439882399, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: EXIT
+      objectReference: {fileID: 0}
     - target: {fileID: 1808171560816712928, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -48191,10 +48210,18 @@ PrefabInstance:
     - target: {fileID: 2149492220152036411, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176917882542378397, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: RESTART
       objectReference: {fileID: 0}
     - target: {fileID: 2705679620618637344, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026750537274667596, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: RESTART
       objectReference: {fileID: 0}
     - target: {fileID: 3425934730379461710, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_SizeDelta.x
@@ -48330,7 +48357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4969051253211553017, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975210525957515278, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: EXIT
       objectReference: {fileID: 0}
     - target: {fileID: 5031413600578818205, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: videoImage
@@ -48448,6 +48479,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameOverManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6827669454802965934, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_text
+      value: EXIT
+      objectReference: {fileID: 0}
     - target: {fileID: 6995614537203473372, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: audioSource
       value: 
@@ -48455,6 +48490,10 @@ PrefabInstance:
     - target: {fileID: 7497655632923599367, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -235
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690020991776067824, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7779715305774571284, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_SizeDelta.x
@@ -48494,7 +48533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9185688447141400268, guid: 035cd5ce5bad2334586c12ae5a5dac77, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -113459,7 +113498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: esci
+  m_text: EXIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -154521,7 +154560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ricomincia
+  m_text: RESTART
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
   m_sharedMaterial: {fileID: -5838873304977813944, guid: a3c204d58deae7f4d818e695cfb5d7e0, type: 2}
@@ -163446,6 +163485,18 @@ PrefabInstance:
     - target: {fileID: 695120412204241172, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
       propertyPath: m_Name
       value: Victory Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661944152328815217, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: readyText
+      value: PRESS E TO DROP THE BODY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661944152328815217, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: victoryManager
+      value: 
+      objectReference: {fileID: 201817266}
+    - target: {fileID: 8661944152328815217, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
+      propertyPath: missingPartsText
+      value: YOU HAVE TO FIND ALL THE PIECES
       objectReference: {fileID: 0}
     - target: {fileID: 8747893379247151964, guid: 8b6349314f85d4c43abec8390552461c, type: 3}
       propertyPath: m_LocalPosition.x

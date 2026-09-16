@@ -108,8 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BodyPartPickup
   bodyPartType: 3
-  pickupText: Premi E per raccogliere
+  pickupText: PRESS E TO PICK UP
   alreadyCollectedText: "Gi\xE0 raccolto"
+  pickupSound: {fileID: 0}
 --- !u!54 &2812655142028584180
 Rigidbody:
   m_ObjectHideFlags: 0
